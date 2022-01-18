@@ -87,6 +87,7 @@ object Parser {
                 if (optionDefaultValue == "..." || optionDefaultValue == "\"\"") {
                     optionDefaultValue = ""
                 }
+                optionDescription = optionDescription.replace(Regex("""\s{2,}"""), " ")
                 optionDefaultValue.toLongOrNull()?.run {
                     optionDataType = OptionDataType.LONG
                 } ?: optionDefaultValue.toDoubleOrNull()?.run {
