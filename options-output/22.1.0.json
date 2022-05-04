@@ -3,7 +3,7 @@
   "name" : "AOTInline",
   "dataType" : "BOOLEAN",
   "defaultValue" : true,
-  "description" : "Perform method inlining in the AOT compiled native image."
+  "description" : "Deprecated."
 }, {
   "type" : "HOSTED",
   "name" : "AOTTrivialInline",
@@ -153,7 +153,7 @@
   "name" : "AllowIncompleteClasspath",
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
-  "description" : "Allow image building with an incomplete class path: report type resolution errors at run time when they are accessed the first time, instead of during image building."
+  "description" : "Deprecated."
 }, {
   "type" : "HOSTED",
   "name" : "AllowJRTFileSystem",
@@ -166,6 +166,12 @@
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
   "description" : "Enables features that allow the VM to be inspected during runtime."
+}, {
+  "type" : "HOSTED",
+  "name" : "AllowVMInternalThreads",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
+  "description" : "Determines if VM internal threads (e.g., a dedicated VM operation or reference handling thread) are allowed in this image."
 }, {
   "type" : "HOSTED",
   "name" : "AlwaysInlineIntrinsics",
@@ -196,6 +202,12 @@
   "dataType" : "STRING",
   "defaultValue" : "None",
   "description" : "Analysis results statistics file."
+}, {
+  "type" : "HOSTED",
+  "name" : "ArrayRegionEqualsConstantLimit",
+  "dataType" : "LONG",
+  "defaultValue" : 4096,
+  "description" : "Array region equality checks will be evaluated at compile time if the receiver is a constant and its length is smaller than this value."
 }, {
   "type" : "HOSTED",
   "name" : "AssertInitializationSpecifiedForAllClasses",
@@ -435,7 +447,7 @@
   "name" : "CompilationExcludePhases",
   "dataType" : "STRING",
   "defaultValue" : "None",
-  "description" : "Exclude certain phases from compilation, either unconditionally or with a method filter."
+  "description" : "Exclude certain phases from compilation, either unconditionally or with a method filter. Multiple exclusions can be specified separated by ':'. Phase names are matched as substrings, e.g.: CompilationExcludePhasesPartialEscape:LoopA.*,B.foo excludes PartialEscapePhase from all compilations and any phase containing 'Loop' in its name from compilations of all methods in class A and of method B.foo."
 }, {
   "type" : "HOSTED",
   "name" : "CompilationExpirationPeriod",
@@ -680,7 +692,7 @@
   "type" : "HOSTED",
   "name" : "DiagnosticsDir",
   "dataType" : "STRING",
-  "defaultValue" : "reports/diagnostics_20220126_211910",
+  "defaultValue" : "reports/diagnostics_20220504_050838",
   "description" : "Sets the dir where diagnostic information is dumped."
 }, {
   "type" : "HOSTED",
@@ -694,6 +706,12 @@
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
   "description" : "Disable intercepting exceptions in debug scopes."
+}, {
+  "type" : "HOSTED",
+  "name" : "DisableIntrinsics",
+  "dataType" : "STRING",
+  "defaultValue" : "None",
+  "description" : "Disable intrinsics matching the given method filter (see MethodFilter option for details). For example, 'DisableIntrinsicsString.equals' disables intrinsics for any method named 'equals' in a class whose simple name is 'String'. You can append ':verbose' at the end of the filter value to print out disabled intrinsics as they are encountered during compilation (e.g., 'String.equals:verbose')."
 }, {
   "type" : "HOSTED",
   "name" : "DisableTypeIdResultVerification",
@@ -735,7 +753,7 @@
   "name" : "DumpHeap",
   "dataType" : "STRING",
   "defaultValue" : "<string>*",
-  "description" : "Dump the heap at a specific time during image building.The option accepts a list of comma separated phases, any of: after-analysis, before-compilation."
+  "description" : "Dump the heap at a specific time during image building.The option accepts a list of comma separated phases, any of: during-analysis, after-analysis, before-compilation."
 }, {
   "type" : "HOSTED",
   "name" : "DumpLLVMStackMap",
@@ -778,12 +796,6 @@
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
   "description" : "Treat any exceptions during dumping as fatal."
-}, {
-  "type" : "HOSTED",
-  "name" : "DuplicateIrreducibleLoops",
-  "dataType" : "BOOLEAN",
-  "defaultValue" : true,
-  "description" : "When enabled, some limited amount of duplication will be performed in order compile code containing irreducible loops."
 }, {
   "type" : "HOSTED",
   "name" : "DynamicCountersPrintGroupSeparator",
@@ -1110,6 +1122,12 @@
   "description" : "Number of bytes at the beginning of each heap chunk that are not used for payload data, i.e., can be freely used as metadata by the heap chunk provider."
 }, {
   "type" : "HOSTED",
+  "name" : "HeapVerifierVerbosity",
+  "dataType" : "LONG",
+  "defaultValue" : 0,
+  "description" : "Control heap verifier verbosity level: 0 - quiet, 1 - info, 2 - warning, 3 - all."
+}, {
+  "type" : "HOSTED",
   "name" : "HotSpotDeoptExplicitExceptions",
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
@@ -1186,6 +1204,12 @@
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
   "description" : "When true, all time zones will be pre-initialized in the image."
+}, {
+  "type" : "HOSTED",
+  "name" : "IncludeDebugHelperMethods",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
+  "description" : "Determines if debugging-specific helper methods are embedded into the image. Those methods can be called directly from the debugger to obtain or print additional information."
 }, {
   "type" : "HOSTED",
   "name" : "IncludeLLVMDebugInfo",
@@ -1284,12 +1308,6 @@
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "InlineIntrinsicsDuringParsing",
-  "dataType" : "BOOLEAN",
-  "defaultValue" : true,
-  "description" : "Inlines intrinsic methods during bytecode parsing."
-}, {
-  "type" : "HOSTED",
   "name" : "InlineMegamorphicCalls",
   "dataType" : "BOOLEAN",
   "defaultValue" : true,
@@ -1360,6 +1378,12 @@
   "dataType" : "BOOLEAN",
   "defaultValue" : true,
   "description" : "Use compiler intrinsifications."
+}, {
+  "type" : "HOSTED",
+  "name" : "IsolatedLoopHeaderAlignment",
+  "dataType" : "LONG",
+  "defaultValue" : 32,
+  "description" : "Alignment in bytes for loop header blocks that have no fall through paths."
 }, {
   "type" : "HOSTED",
   "name" : "JNI",
@@ -1455,7 +1479,7 @@
   "name" : "LIROptimization",
   "dataType" : "BOOLEAN",
   "defaultValue" : true,
-  "description" : "Enable LIR level optimiztations."
+  "description" : "Enable LIR level optimizations."
 }, {
   "type" : "HOSTED",
   "name" : "LIRProfileMethods",
@@ -1506,10 +1530,28 @@
   "description" : "Enable a limit for the number of objects recorded for each type of a type state before disabling heap sensitivity for that type. The analysis must be heap sensitive."
 }, {
   "type" : "HOSTED",
+  "name" : "LinkAtBuildTime",
+  "dataType" : "STRING",
+  "defaultValue" : "<string>*",
+  "description" : "Require types to be fully defined at image build-time. If used without args, all classes in scope of the option are required to be fully defined."
+}, {
+  "type" : "HOSTED",
+  "name" : "LinkAtBuildTimePaths",
+  "dataType" : "STRING",
+  "defaultValue" : "<string>*",
+  "description" : "Require all types in given class or module-path entries to be fully defined at image build-time."
+}, {
+  "type" : "HOSTED",
   "name" : "LinkerRPath",
   "dataType" : "STRING",
   "defaultValue" : "<string>*",
   "description" : "Path passed to the linker as the -rpath (list of comma-separated directories)."
+}, {
+  "type" : "HOSTED",
+  "name" : "ListCPUFeatures",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
+  "description" : "Show CPU features specific to the target platform and exit."
 }, {
   "type" : "HOSTED",
   "name" : "ListMetrics",
@@ -1659,7 +1701,7 @@
   "name" : "MaxDuplicationFactor",
   "dataType" : "DOUBLE",
   "defaultValue" : 2.0,
-  "description" : "How much duplication can happen because of irreducible loops before bailing out."
+  "description" : "Max amount of extra effort to expend handling irreducible loops. A value < 1 disables support for irreducible loops."
 }, {
   "type" : "HOSTED",
   "name" : "MaxHeapContextDepth",
@@ -1904,7 +1946,7 @@
   "type" : "HOSTED",
   "name" : "NumberOfThreads",
   "dataType" : "LONG",
-  "defaultValue" : 2,
+  "defaultValue" : 8,
   "description" : "The maximum number of threads to use concurrently during native image generation."
 }, {
   "type" : "HOSTED",
@@ -1995,7 +2037,7 @@
   "name" : "Optimize",
   "dataType" : "LONG",
   "defaultValue" : 2,
-  "description" : "Control native-image code optimizations: 0 - no optimizations, 1 - basic optimizations, 2 - aggressive optimizations."
+  "description" : "Control native-image code optimizations: b - optimize for shortest build time, 0 - no optimizations, 1 - basic optimizations, 2 - aggressive optimizations."
 }, {
   "type" : "HOSTED",
   "name" : "PageSize",
@@ -2091,19 +2133,13 @@
   "name" : "PrintBackendCFG",
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
-  "description" : "Enable dumping LIR, register allocation and code generation info to the C1Visualizer."
+  "description" : "Enable dumping scheduled HIR, LIR, register allocation and code generation info to the C1Visualizer."
 }, {
   "type" : "HOSTED",
   "name" : "PrintBlockMapping",
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
   "description" : "Enable dumping CFG built during initial BciBlockMapping."
-}, {
-  "type" : "HOSTED",
-  "name" : "PrintCFG",
-  "dataType" : "BOOLEAN",
-  "defaultValue" : false,
-  "description" : "Enable dumping to the C1Visualizer. Enabling this option implies PrintBackendCFG."
 }, {
   "type" : "HOSTED",
   "name" : "PrintCallEdges",
@@ -2466,16 +2502,16 @@
   "description" : "Return after analysis."
 }, {
   "type" : "HOSTED",
-  "name" : "ReturnSpecialRegs",
-  "dataType" : "BOOLEAN",
-  "defaultValue" : true,
-  "description" : "Return special registers from functions in LLVM bitcode. This may decrease performance if the target doesn't support returning multiple values from a function."
-}, {
-  "type" : "HOSTED",
   "name" : "RuntimeAssertions",
   "dataType" : "STRING",
   "defaultValue" : "<string>*",
   "description" : "Enable or disable Java assert statements at run time."
+}, {
+  "type" : "HOSTED",
+  "name" : "RuntimeCheckedCPUFeatures",
+  "dataType" : "STRING",
+  "defaultValue" : "<string>*",
+  "description" : "Comma separated list of CPU features that will be enabled for runtime checks. The native image may check at run time if such features are supported by the target CPU, and can optimize certain operations based on this information. If a feature is not supported at run time, a less optimized variant will be executed. Because of the presence of multiple code variants, enabling runtime features can result in larger executables. To completely turn off runtime checked CPU features, set this option to the empty string. The specific options available are target platform dependent. See --list-cpu-features for feature list. The default values are: AMD64: 'AVX,AVX2'; AArch64: ''."
 }, {
   "type" : "HOSTED",
   "name" : "RuntimeSystemAssertions",
@@ -2664,16 +2700,22 @@
   "description" : "Use strict checks when performing query code compilation."
 }, {
   "type" : "HOSTED",
-  "name" : "StringIndexOfLimit",
+  "name" : "StringIndexOfConstantLimit",
   "dataType" : "LONG",
   "defaultValue" : 4096,
-  "description" : "String.indexOf invocations will be evaluated at compile time if the receiver is a constant and its length is lower than this value."
+  "description" : "String.indexOf invocations will be evaluated at compile time if the receiver is a constant and its length is smaller than this value."
 }, {
   "type" : "HOSTED",
   "name" : "SupportCompileInIsolates",
   "dataType" : "LONG",
   "defaultValue" : 4096,
   "description" : "Support runtime compilation in separate isolates (enable at runtime with option CompileInIsolates)."
+}, {
+  "type" : "HOSTED",
+  "name" : "SupportContinuations",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
+  "description" : "Support continuations (without requiring a Project Loom JDK)."
 }, {
   "type" : "HOSTED",
   "name" : "SupportJsrBytecodes",
@@ -3048,12 +3090,6 @@
   "description" : "Determines if VM operations should be executed in a dedicated thread."
 }, {
   "type" : "HOSTED",
-  "name" : "UseEncodedGraphs",
-  "dataType" : "BOOLEAN",
-  "defaultValue" : false,
-  "description" : "Encode and decode snippets and substitutions before parsing to test libgraal code path. This option is ignored in the context of libgraal."
-}, {
-  "type" : "HOSTED",
   "name" : "UseEpsilonGC",
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
@@ -3081,7 +3117,7 @@
   "name" : "UseLoom",
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
-  "description" : "Build with Loom JDK."
+  "description" : "Build with Project Loom JDK."
 }, {
   "type" : "HOSTED",
   "name" : "UseLoopEndFrequencies",
@@ -3100,12 +3136,6 @@
   "dataType" : "BOOLEAN",
   "defaultValue" : true,
   "description" : "Determines if a null region is present between the heap base and the image heap."
-}, {
-  "type" : "HOSTED",
-  "name" : "UseReferenceHandlerThread",
-  "dataType" : "BOOLEAN",
-  "defaultValue" : false,
-  "description" : "Populate reference queues in a separate thread rather than after a garbage collection."
 }, {
   "type" : "HOSTED",
   "name" : "UseRememberedSet",
@@ -3240,6 +3270,12 @@
   "description" : "Verify write barriers."
 }, {
   "type" : "HOSTED",
+  "name" : "WarnMissingIntrinsic",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
+  "description" : "Print a warning when a missing intrinsic is seen."
+}, {
+  "type" : "HOSTED",
   "name" : "ZapChunks",
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
@@ -3334,6 +3370,18 @@
   "dataType" : "STRING",
   "defaultValue" : "None",
   "description" : "Analysis results statistics file."
+}, {
+  "type" : "RUNTIME",
+  "name" : "ArrayRegionEqualsConstantLimit",
+  "dataType" : "LONG",
+  "defaultValue" : 4096,
+  "description" : "Array region equality checks will be evaluated at compile time if the receiver is a constant and its length is smaller than this value."
+}, {
+  "type" : "RUNTIME",
+  "name" : "AutomaticReferenceHandling",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
+  "description" : "Determines if the reference handling is executed automatically or manually."
 }, {
   "type" : "RUNTIME",
   "name" : "BenchmarkCounterPrintingCutoff",
@@ -3441,7 +3489,7 @@
   "name" : "CompilationExcludePhases",
   "dataType" : "STRING",
   "defaultValue" : "None",
-  "description" : "Exclude certain phases from compilation, either unconditionally or with a method filter."
+  "description" : "Exclude certain phases from compilation, either unconditionally or with a method filter. Multiple exclusions can be specified separated by ':'. Phase names are matched as substrings, e.g.: CompilationExcludePhasesPartialEscape:LoopA.*,B.foo excludes PartialEscapePhase from all compilations and any phase containing 'Loop' in its name from compilations of all methods in class A and of method B.foo."
 }, {
   "type" : "RUNTIME",
   "name" : "CompilationExpirationPeriod",
@@ -3576,6 +3624,12 @@
   "description" : "Disable intercepting exceptions in debug scopes."
 }, {
   "type" : "RUNTIME",
+  "name" : "DisableIntrinsics",
+  "dataType" : "STRING",
+  "defaultValue" : "None",
+  "description" : "Disable intrinsics matching the given method filter (see MethodFilter option for details). For example, 'DisableIntrinsicsString.equals' disables intrinsics for any method named 'equals' in a class whose simple name is 'String'. You can append ':verbose' at the end of the filter value to print out disabled intrinsics as they are encountered during compilation (e.g., 'String.equals:verbose')."
+}, {
+  "type" : "RUNTIME",
   "name" : "DivertParameterReturningMethod",
   "dataType" : "BOOLEAN",
   "defaultValue" : true,
@@ -3622,12 +3676,6 @@
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
   "description" : "Treat any exceptions during dumping as fatal."
-}, {
-  "type" : "RUNTIME",
-  "name" : "DuplicateIrreducibleLoops",
-  "dataType" : "BOOLEAN",
-  "defaultValue" : true,
-  "description" : "When enabled, some limited amount of duplication will be performed in order compile code containing irreducible loops."
 }, {
   "type" : "RUNTIME",
   "name" : "DynamicCountersPrintGroupSeparator",
@@ -3810,6 +3858,12 @@
   "description" : ""
 }, {
   "type" : "RUNTIME",
+  "name" : "HeapVerifierVerbosity",
+  "dataType" : "LONG",
+  "defaultValue" : 0,
+  "description" : "Control heap verifier verbosity level: 0 - quiet, 1 - info, 2 - warning, 3 - all."
+}, {
+  "type" : "RUNTIME",
   "name" : "HotSpotDeoptExplicitExceptions",
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
@@ -3894,12 +3948,6 @@
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "InlineIntrinsicsDuringParsing",
-  "dataType" : "BOOLEAN",
-  "defaultValue" : true,
-  "description" : "Inlines intrinsic methods during bytecode parsing."
-}, {
-  "type" : "RUNTIME",
   "name" : "InlineMegamorphicCalls",
   "dataType" : "BOOLEAN",
   "defaultValue" : true,
@@ -3958,6 +4006,12 @@
   "dataType" : "BOOLEAN",
   "defaultValue" : true,
   "description" : "Use compiler intrinsifications."
+}, {
+  "type" : "RUNTIME",
+  "name" : "IsolatedLoopHeaderAlignment",
+  "dataType" : "LONG",
+  "defaultValue" : 32,
+  "description" : "Alignment in bytes for loop header blocks that have no fall through paths."
 }, {
   "type" : "RUNTIME",
   "name" : "LIRDynMoveProfileMethod",
@@ -4023,7 +4077,7 @@
   "name" : "LIROptimization",
   "dataType" : "BOOLEAN",
   "defaultValue" : true,
-  "description" : "Enable LIR level optimiztations."
+  "description" : "Enable LIR level optimizations."
 }, {
   "type" : "RUNTIME",
   "name" : "LIRProfileMethods",
@@ -4197,7 +4251,7 @@
   "name" : "MaxDuplicationFactor",
   "dataType" : "DOUBLE",
   "defaultValue" : 2.0,
-  "description" : "How much duplication can happen because of irreducible loops before bailing out."
+  "description" : "Max amount of extra effort to expend handling irreducible loops. A value < 1 disables support for irreducible loops."
 }, {
   "type" : "RUNTIME",
   "name" : "MaxHeapContextDepth",
@@ -4509,19 +4563,13 @@
   "name" : "PrintBackendCFG",
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
-  "description" : "Enable dumping LIR, register allocation and code generation info to the C1Visualizer."
+  "description" : "Enable dumping scheduled HIR, LIR, register allocation and code generation info to the C1Visualizer."
 }, {
   "type" : "RUNTIME",
   "name" : "PrintBlockMapping",
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
   "description" : "Enable dumping CFG built during initial BciBlockMapping."
-}, {
-  "type" : "RUNTIME",
-  "name" : "PrintCFG",
-  "dataType" : "BOOLEAN",
-  "defaultValue" : false,
-  "description" : "Enable dumping to the C1Visualizer. Enabling this option implies PrintBackendCFG."
 }, {
   "type" : "RUNTIME",
   "name" : "PrintCallEdges",
@@ -4866,10 +4914,10 @@
   "description" : "Perform checks that guards and deopts aren't introduced in graphs that should handle exceptions explicitly."
 }, {
   "type" : "RUNTIME",
-  "name" : "StringIndexOfLimit",
+  "name" : "StringIndexOfConstantLimit",
   "dataType" : "LONG",
   "defaultValue" : 4096,
-  "description" : "String.indexOf invocations will be evaluated at compile time if the receiver is a constant and its length is lower than this value."
+  "description" : "String.indexOf invocations will be evaluated at compile time if the receiver is a constant and its length is smaller than this value."
 }, {
   "type" : "RUNTIME",
   "name" : "SupportJsrBytecodes",
@@ -5094,12 +5142,6 @@
   "description" : "Enables CompilationStatistics."
 }, {
   "type" : "RUNTIME",
-  "name" : "UseEncodedGraphs",
-  "dataType" : "BOOLEAN",
-  "defaultValue" : false,
-  "description" : "Encode and decode snippets and substitutions before parsing to test libgraal code path. This option is ignored in the context of libgraal."
-}, {
-  "type" : "RUNTIME",
   "name" : "UseExceptionProbability",
   "dataType" : "BOOLEAN",
   "defaultValue" : true,
@@ -5122,6 +5164,12 @@
   "dataType" : "BOOLEAN",
   "defaultValue" : true,
   "description" : ""
+}, {
+  "type" : "RUNTIME",
+  "name" : "UseReferenceHandlerThread",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
+  "description" : "Populate reference queues in a separate thread rather than after a garbage collection."
 }, {
   "type" : "RUNTIME",
   "name" : "UseSnippetGraphCache",
@@ -5200,6 +5248,12 @@
   "dataType" : "BOOLEAN",
   "defaultValue" : false,
   "description" : ""
+}, {
+  "type" : "RUNTIME",
+  "name" : "WarnMissingIntrinsic",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
+  "description" : "Print a warning when a missing intrinsic is seen."
 }, {
   "type" : "RUNTIME",
   "name" : "WriteableCodeCache",

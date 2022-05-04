@@ -4,6 +4,7 @@ Parse options of GraalVM `native-image` to JSON data.
 
 Two GraalVM versions supported:
 
+* `22.1.0`
 * `21.3.0`
 * `20.3.4`
 

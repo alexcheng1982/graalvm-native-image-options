@@ -56,7 +56,11 @@ object Parser {
 
         fun finishOptionDescription() {
             inOptionDescription = false
-            optionDescription = buffer.toString().replace("\n", " ").trim()
+            optionDescription = buffer.toString()
+                .replace("\r", " ")
+                .replace("\n", " ")
+                .replace(Regex("\\s+"), " ")
+                .trim()
             buffer.clear()
         }
 

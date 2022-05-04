@@ -602,7 +602,7 @@
   "type" : "HOSTED",
   "name" : "DivertParameterReturningMethod",
   "dataType" : "BOOLEAN",
-  "defaultValue" : false,
+  "defaultValue" : true,
   "description" : "Analysis: Detect methods that return one of their parameters and hardwire the parameter straight to the return."
 }, {
   "type" : "HOSTED",
@@ -1184,7 +1184,7 @@
   "type" : "HOSTED",
   "name" : "JNIConfigurationFiles",
   "dataType" : "STRING",
-  "defaultValue" : "",
+  "defaultValue" : "None",
   "description" : "Files describing program elements to be made accessible via JNI (for syntax, see ReflectionConfigurationFiles)."
 }, {
   "type" : "HOSTED",
@@ -2126,7 +2126,7 @@
   "type" : "HOSTED",
   "name" : "ReflectionConfigurationResources",
   "dataType" : "STRING",
-  "defaultValue" : "",
+  "defaultValue" : "None",
   "description" : "Resources describing program elements to be made available for reflection (see ReflectionConfigurationFiles)."
 }, {
   "type" : "HOSTED",
@@ -2708,7 +2708,7 @@
   "type" : "HOSTED",
   "name" : "TruffleCompilerConfiguration",
   "dataType" : "STRING",
-  "defaultValue" : "",
+  "defaultValue" : "None",
   "description" : "Select a compiler configuration for Truffle compilation (default: use Graal system compiler configuration)."
 }, {
   "type" : "HOSTED",
@@ -3338,7 +3338,7 @@
   "type" : "RUNTIME",
   "name" : "DivertParameterReturningMethod",
   "dataType" : "BOOLEAN",
-  "defaultValue" : false,
+  "defaultValue" : true,
   "description" : "Analysis: Detect methods that return one of their parameters and hardwire the parameter straight to the return."
 }, {
   "type" : "RUNTIME",
@@ -4772,7 +4772,7 @@
   "type" : "RUNTIME",
   "name" : "TruffleCompilerConfiguration",
   "dataType" : "STRING",
-  "defaultValue" : "",
+  "defaultValue" : "None",
   "description" : "Select a compiler configuration for Truffle compilation (default: use Graal system compiler configuration)."
 }, {
   "type" : "RUNTIME",

@@ -674,7 +674,7 @@
   "type" : "HOSTED",
   "name" : "DivertParameterReturningMethod",
   "dataType" : "BOOLEAN",
-  "defaultValue" : false,
+  "defaultValue" : true,
   "description" : "Analysis: Detect methods that return one of their parameters and hardwire the parameter straight to the return."
 }, {
   "type" : "HOSTED",
@@ -2457,7 +2457,7 @@
   "name" : "SerializationConfigurationFiles",
   "dataType" : "STRING",
   "defaultValue" : "<string>*",
-  "description" : "One or several (comma-separated) paths to JSON files that specify lists of serialization configurations. [Extra help available]"
+  "description" : "One or several (comma-separated) paths to JSON files that specify lists of serialization configurations."
 }, {
   "type" : "HOSTED",
   "name" : "SerializationConfigurationResources",
@@ -2469,7 +2469,7 @@
   "name" : "SerializationDenyConfigurationFiles",
   "dataType" : "STRING",
   "defaultValue" : "<string>*",
-  "description" : "One or several (comma-separated) paths to JSON files that specify lists of serialization configurations. [Extra help available]"
+  "description" : "One or several (comma-separated) paths to JSON files that specify lists of serialization configurations."
 }, {
   "type" : "HOSTED",
   "name" : "SerializationDenyConfigurationResources",
@@ -2966,7 +2966,7 @@
   "type" : "HOSTED",
   "name" : "TruffleCompilerConfiguration",
   "dataType" : "STRING",
-  "defaultValue" : "",
+  "defaultValue" : "None",
   "description" : "Select a compiler configuration for Truffle compilation (default: use Graal system compiler configuration)."
 }, {
   "type" : "HOSTED",
@@ -3614,7 +3614,7 @@
   "type" : "RUNTIME",
   "name" : "DivertParameterReturningMethod",
   "dataType" : "BOOLEAN",
-  "defaultValue" : false,
+  "defaultValue" : true,
   "description" : "Analysis: Detect methods that return one of their parameters and hardwire the parameter straight to the return."
 }, {
   "type" : "RUNTIME",
@@ -5120,7 +5120,7 @@
   "type" : "RUNTIME",
   "name" : "TruffleCompilerConfiguration",
   "dataType" : "STRING",
-  "defaultValue" : "",
+  "defaultValue" : "None",
   "description" : "Select a compiler configuration for Truffle compilation (default: use Graal system compiler configuration)."
 }, {
   "type" : "RUNTIME",
