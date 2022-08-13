@@ -119,7 +119,7 @@ object Parser {
                             if (input[index + 1] == 'R') {
                                 optionType = OptionType.RUNTIME
                             }
-                            if (input[index + 3] == '?') {
+                            if (input[index + 3] == '?' || input[index + 3] == '±') {
                                 optionDataType = OptionDataType.BOOLEAN
                                 index++
                             } else {

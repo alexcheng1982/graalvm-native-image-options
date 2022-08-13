@@ -1,6 +1,8 @@
 # GraalVM `native-image` Options
 
 Parse options of GraalVM `native-image` to JSON data.
+
+Visit [build-native-java-apps.cc](https://build-native-java-apps.cc/references/expert-options/) to see these options.
  
 GraalVM versions supported:
 
@@ -9,7 +11,7 @@ GraalVM versions supported:
 * `21.3.0`
 * `20.3.4`
 
-Options are retrieved using `native-image --expert-options-all`
+Options are retrieved using `native-image --expert-options-all`.
 
 Output content is saved into `options-input` directory.
 

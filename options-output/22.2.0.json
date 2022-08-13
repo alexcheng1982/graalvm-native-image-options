@@ -1,14 +1,14 @@
 [ {
   "type" : "HOSTED",
-  "name" : "±AOTInline",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "AOTInline",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Deprecated."
 }, {
   "type" : "HOSTED",
-  "name" : "±AOTTrivialInline",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "AOTTrivialInline",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Perform trivial method inlining in the AOT compiled native image."
 }, {
   "type" : "HOSTED",
@@ -24,21 +24,21 @@
   "description" : "Enables instruction profiling on assembler level. Valid values are a comma separated list of supported instructions. Compare with subclasses of Assembler.InstructionCounter."
 }, {
   "type" : "HOSTED",
-  "name" : "±AbortOnBenchmarkCounterOverflow",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AbortOnBenchmarkCounterOverflow",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Abort VM with SIGILL if benchmark counters controlled by the (Generic|Timed|Benchmark)DynamicCounters."
 }, {
   "type" : "HOSTED",
-  "name" : "±AddAllCharsets",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AddAllCharsets",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Make all hosted charsets available at run time."
 }, {
   "type" : "HOSTED",
-  "name" : "±AddAllFileSystemProviders",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "AddAllFileSystemProviders",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Make all supported providers returned by FileSystemProvider.installedProviders() available at run time."
 }, {
   "type" : "HOSTED",
@@ -78,9 +78,9 @@
   "description" : "File to which aggregated metrics are dumped at shutdown. A CSV format is used if the file ends with .csv otherwise a more human readable format is used. If not specified, metrics are dumped to the console."
 }, {
   "type" : "HOSTED",
-  "name" : "±AliasArrayTypeFlows",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "AliasArrayTypeFlows",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Model all array type flows using a unique elements type flow abstraction."
 }, {
   "type" : "HOSTED",
@@ -132,57 +132,57 @@
   "description" : "Bytes that can be allocated before (re-)querying the physical memory size."
 }, {
   "type" : "HOSTED",
-  "name" : "±AllocationProfiling",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AllocationProfiling",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable runtime profiling of allocation."
 }, {
   "type" : "HOSTED",
-  "name" : "±AllocationSiteSensitiveHeap",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AllocationSiteSensitiveHeap",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "A context sensitive heap means that each heap allocated object is modeled by using at least the allocation site."
 }, {
   "type" : "HOSTED",
-  "name" : "±AllowFoldMethods",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AllowFoldMethods",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Allow MethodTypeFlow to see @Fold methods."
 }, {
   "type" : "HOSTED",
-  "name" : "±AllowIncompleteClasspath",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AllowIncompleteClasspath",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Deprecated."
 }, {
   "type" : "HOSTED",
-  "name" : "±AllowJRTFileSystem",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AllowJRTFileSystem",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable support for reading Java modules (jimage format) and the jrt:// file system. Requires java.home to be set at runtime."
 }, {
   "type" : "HOSTED",
-  "name" : "±AllowVMInspection",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AllowVMInspection",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enables features that allow the VM to be inspected during runtime."
 }, {
   "type" : "HOSTED",
-  "name" : "±AllowVMInternalThreads",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "AllowVMInternalThreads",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Determines if VM internal threads (e.g., a dedicated VM operation or reference handling thread) are allowed in this image."
 }, {
   "type" : "HOSTED",
-  "name" : "±AlwaysInlineIntrinsics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AlwaysInlineIntrinsics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Unconditionally inline intrinsics."
 }, {
   "type" : "HOSTED",
-  "name" : "±AlwaysInlineVTableStubs",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AlwaysInlineVTableStubs",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
@@ -210,27 +210,27 @@
   "description" : "Array region equality checks will be evaluated at compile time if the receiver is a constant and its length is smaller than this value."
 }, {
   "type" : "HOSTED",
-  "name" : "±AssertInitializationSpecifiedForAllClasses",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AssertInitializationSpecifiedForAllClasses",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Assert class initialization is specified for all classes."
 }, {
   "type" : "HOSTED",
-  "name" : "±BenchmarkCounterPrintingCutoff",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "BenchmarkCounterPrintingCutoff",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use a cutoff to print only most significant counters."
 }, {
   "type" : "HOSTED",
-  "name" : "±BenchmarkCountersDumpDynamic",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "BenchmarkCountersDumpDynamic",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Dump dynamic counters."
 }, {
   "type" : "HOSTED",
-  "name" : "±BenchmarkCountersDumpStatic",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "BenchmarkCountersDumpStatic",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Dump static counters."
 }, {
   "type" : "HOSTED",
@@ -246,9 +246,9 @@
   "description" : "Turn on the benchmark counters. The format of this option is:."
 }, {
   "type" : "HOSTED",
-  "name" : "±BootstrapInitializeOnly",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "BootstrapInitializeOnly",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Do not compile anything on bootstrap but just initialize the compiler."
 }, {
   "type" : "HOSTED",
@@ -264,45 +264,45 @@
   "description" : "Ratio of the maximum compilation rate below which the bootstrap compilation rate must not fall (0 or less disables monitoring)."
 }, {
   "type" : "HOSTED",
-  "name" : "±BuildOutputBreakdowns",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "BuildOutputBreakdowns",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Show code and heap breakdowns as part of the build output."
 }, {
   "type" : "HOSTED",
-  "name" : "±BuildOutputColorful",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "BuildOutputColorful",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Colorize build output."
 }, {
   "type" : "HOSTED",
-  "name" : "±BuildOutputGCWarnings",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "BuildOutputGCWarnings",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Print GC warnings as part of build output."
 }, {
   "type" : "HOSTED",
-  "name" : "±BuildOutputLinks",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "BuildOutputLinks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Show links in build output."
 }, {
   "type" : "HOSTED",
-  "name" : "±BuildOutputPrefix",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "BuildOutputPrefix",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Prefix build output with '<pid>:<image name>'."
 }, {
   "type" : "HOSTED",
-  "name" : "±BuildOutputProgress",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "BuildOutputProgress",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Report progress in build output."
 }, {
   "type" : "HOSTED",
-  "name" : "±BuildOutputUseNewStyle",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "BuildOutputUseNewStyle",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use new build output style."
 }, {
   "type" : "HOSTED",
@@ -342,39 +342,39 @@
   "description" : "C standard to use in header files. Possible values are: [C89, C99, C11]."
 }, {
   "type" : "HOSTED",
-  "name" : "±CanOmitFrame",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "CanOmitFrame",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±CanonicalGraphStringsCheckConstants",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "CanonicalGraphStringsCheckConstants",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Exclude virtual nodes when dumping canonical text for graphs."
 }, {
   "type" : "HOSTED",
-  "name" : "±CanonicalGraphStringsExcludeVirtuals",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "CanonicalGraphStringsExcludeVirtuals",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Exclude virtual nodes when dumping canonical text for graphs."
 }, {
   "type" : "HOSTED",
-  "name" : "±CanonicalGraphStringsRemoveIdentities",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "CanonicalGraphStringsRemoveIdentities",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Attempts to remove object identity hashes when dumping canonical text for graphs."
 }, {
   "type" : "HOSTED",
-  "name" : "±CheckRecurringCallbackOnNativeToJavaTransition",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "CheckRecurringCallbackOnNativeToJavaTransition",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Test whether a thread's recurring callback is pending on each transition from native code to Java."
 }, {
   "type" : "HOSTED",
-  "name" : "±CheckToolchain",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "CheckToolchain",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Check if native-toolchain is known to work with native-image."
 }, {
   "type" : "HOSTED",
@@ -390,9 +390,9 @@
   "description" : "A comma-separated list of classes appended with their initialization strategy (':build_time', ':rerun', or ':run_time')."
 }, {
   "type" : "HOSTED",
-  "name" : "±ClearMetricsAfterBootstrap",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ClearMetricsAfterBootstrap",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Clear the debug metrics after bootstrap."
 }, {
   "type" : "HOSTED",
@@ -402,15 +402,15 @@
   "description" : "Alignment of AOT and JIT compiled code in bytes."
 }, {
   "type" : "HOSTED",
-  "name" : "±CodeCacheCounters",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "CodeCacheCounters",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Count accesses to the image and runtime code info table."
 }, {
   "type" : "HOSTED",
-  "name" : "±CodeInfoEncoderCounters",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "CodeInfoEncoderCounters",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Statistics about code and deoptimization information."
 }, {
   "type" : "HOSTED",
@@ -420,15 +420,15 @@
   "description" : "The granularity of the index for looking up code metadata. Should be a power of 2. Larger values make the index smaller, but access slower."
 }, {
   "type" : "HOSTED",
-  "name" : "±CollectImageBuildStatistics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "CollectImageBuildStatistics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Collect information during image build about devirtualized invokes and bytecode exceptions."
 }, {
   "type" : "HOSTED",
-  "name" : "±CompilationBailoutAsFailure",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "CompilationBailoutAsFailure",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Treat compilation bailouts like compilation failures."
 }, {
   "type" : "HOSTED",
@@ -468,9 +468,9 @@
   "description" : "Delay in seconds before watch dog monitoring a compilation (0 disables monitoring)."
 }, {
   "type" : "HOSTED",
-  "name" : "±CompileGraalWithC1Only",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "CompileGraalWithC1Only",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "In tiered mode compile Graal and JVMCI using optimized first tier code."
 }, {
   "type" : "HOSTED",
@@ -486,9 +486,9 @@
   "description" : "Names the compiler configuration to use. If omitted, the compiler configuration with the highest auto-selection priority is used. To see the set of available configurations, supply the value 'help' to this option."
 }, {
   "type" : "HOSTED",
-  "name" : "±ConditionalElimination",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ConditionalElimination",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
@@ -510,9 +510,9 @@
   "description" : "Resource path above configuration resources for dynamic features at runtime."
 }, {
   "type" : "HOSTED",
-  "name" : "±ConfigureReflectionMetadata",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ConfigureReflectionMetadata",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable runtime instantiation of reflection objects for non-invoked methods."
 }, {
   "type" : "HOSTED",
@@ -522,9 +522,9 @@
   "description" : "Pattern for specifying scopes in which counters are enabled. See the Dump option for the pattern syntax. An empty value enables all counters unconditionally."
 }, {
   "type" : "HOSTED",
-  "name" : "±CountWriteBarriers",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "CountWriteBarriers",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Instrument write barriers with counters."
 }, {
   "type" : "HOSTED",
@@ -540,21 +540,21 @@
   "description" : "Pattern for method(s) that will trigger an exception when compiled. This option exists to test handling compilation crashes gracefully. See the MethodFilter option for the pattern syntax. A ':Bailout' suffix will raise a bailout exception and a ':PermanentBailout' suffix will raise a permanent bailout exception."
 }, {
   "type" : "HOSTED",
-  "name" : "±DashboardAll",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DashboardAll",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "In the dashboard dump, include all available information about the native image (this takes precedence over more specific flags)."
 }, {
   "type" : "HOSTED",
-  "name" : "±DashboardBgv",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "DashboardBgv",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Set dashboard to use BGV format for dump."
 }, {
   "type" : "HOSTED",
-  "name" : "±DashboardCode",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DashboardCode",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "In the dashboard dump, include the breakdown of the code size across different packages."
 }, {
   "type" : "HOSTED",
@@ -564,33 +564,33 @@
   "description" : "Enable dashboard dumps to the specified file."
 }, {
   "type" : "HOSTED",
-  "name" : "±DashboardHeap",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DashboardHeap",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "In the dashboard dump, include the breakdown of the object sizes in the heap across different classes."
 }, {
   "type" : "HOSTED",
-  "name" : "±DashboardJson",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DashboardJson",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Set dashboard to use JSON format for dump."
 }, {
   "type" : "HOSTED",
-  "name" : "±DashboardPointsTo",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DashboardPointsTo",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "In the dashboard dump, include the information about the points-to analysis."
 }, {
   "type" : "HOSTED",
-  "name" : "±DashboardPretty",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DashboardPretty",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Set dashboard to use pretty print in JSON format."
 }, {
   "type" : "HOSTED",
-  "name" : "±DeadlockWatchdogExitOnTimeout",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "DeadlockWatchdogExitOnTimeout",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Exit the image builder VM after printing call stacks."
 }, {
   "type" : "HOSTED",
@@ -612,9 +612,9 @@
   "description" : "Search path for source files for Application or GraalVM classes (list of comma-separated directories or jar files)."
 }, {
   "type" : "HOSTED",
-  "name" : "±DebugStubsAndSnippets",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DebugStubsAndSnippets",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable debug output for stub code generation and snippet preparation."
 }, {
   "type" : "HOSTED",
@@ -630,27 +630,27 @@
   "description" : "Default locale of the image, by the default it is the same as the default locale of the image builder."
 }, {
   "type" : "HOSTED",
-  "name" : "±DeleteLocalSymbols",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "DeleteLocalSymbols",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use linker option to remove all local symbols from image."
 }, {
   "type" : "HOSTED",
-  "name" : "±DeoptALot",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DeoptALot",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±DeoptAfterOSR",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "DeoptAfterOSR",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Deoptimize OSR compiled code when the OSR entry loop is finished if there is no mature profile available for the rest of the method."
 }, {
   "type" : "HOSTED",
-  "name" : "±DeoptimizeAll",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DeoptimizeAll",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Compiles all methods as deoptimization targets for testing."
 }, {
   "type" : "HOSTED",
@@ -660,15 +660,15 @@
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±DetailedAsserts",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DetailedAsserts",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable expensive assertions if normal assertions (i.e. -ea or -esa) are enabled."
 }, {
   "type" : "HOSTED",
-  "name" : "±DetectUserDirectoriesInImageHeap",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DetectUserDirectoriesInImageHeap",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "When set to true, the image generator verifies that the image heap does not contain a home directory as a substring."
 }, {
   "type" : "HOSTED",
@@ -684,15 +684,15 @@
   "description" : "Sets the dir where diagnostic information is dumped."
 }, {
   "type" : "HOSTED",
-  "name" : "±DiagnosticsMode",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DiagnosticsMode",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enables the diagnostic mode."
 }, {
   "type" : "HOSTED",
-  "name" : "±DisableIntercept",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DisableIntercept",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Disable intercepting exceptions in debug scopes."
 }, {
   "type" : "HOSTED",
@@ -702,9 +702,9 @@
   "description" : "Disable intrinsics matching the given method filter (see MethodFilter option for details). For example, 'DisableIntrinsicsString.equals' disables intrinsics for any method named 'equals' in a class whose simple name is 'String'. You can append ':verbose' at the end of the filter value to print out disabled intrinsics as they are encountered during compilation (e.g., 'String.equals:verbose')."
 }, {
   "type" : "HOSTED",
-  "name" : "±DisableTypeIdResultVerification",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "DisableTypeIdResultVerification",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "For internal purposes only. Disables type id result verification even when running with assertions enabled."
 }, {
   "type" : "HOSTED",
@@ -714,9 +714,9 @@
   "description" : "List of comma separated URL protocols that must never be included."
 }, {
   "type" : "HOSTED",
-  "name" : "±DivertParameterReturningMethod",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "DivertParameterReturningMethod",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Analysis: Detect methods that return one of their parameters and hardwire the parameter straight to the return."
 }, {
   "type" : "HOSTED",
@@ -726,15 +726,15 @@
   "description" : "Filter pattern for specifying scopes in which dumping is enabled."
 }, {
   "type" : "HOSTED",
-  "name" : "±DumpAfterEveryBCI",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DumpAfterEveryBCI",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Dump the current graph after every bci to IGV."
 }, {
   "type" : "HOSTED",
-  "name" : "±DumpEndVersusExitLoopFrequencies",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DumpEndVersusExitLoopFrequencies",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Debug flag to dump loop frequency differences computed based on loop end or exit nodes.If the frequencies diverge a lot, this may indicate missing profiles on control flowinside the loop body."
 }, {
   "type" : "HOSTED",
@@ -744,9 +744,9 @@
   "description" : "Dump the heap at a specific time during image building.The option accepts a list of comma separated phases, any of: during-analysis, after-analysis, before-compilation."
 }, {
   "type" : "HOSTED",
-  "name" : "±DumpOnError",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DumpOnError",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Send compiler IR to dump handlers on error."
 }, {
   "type" : "HOSTED",
@@ -762,27 +762,27 @@
   "description" : "The directory where various Graal dump files are written."
 }, {
   "type" : "HOSTED",
-  "name" : "±DumpTargetInfo",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DumpTargetInfo",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Show native-toolchain information and image-build settings."
 }, {
   "type" : "HOSTED",
-  "name" : "±DumpThreadStacksOnSignal",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DumpThreadStacksOnSignal",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Dumps all thread stacktraces on SIGQUIT/SIGBREAK."
 }, {
   "type" : "HOSTED",
-  "name" : "±DumpingErrorsAreFatal",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DumpingErrorsAreFatal",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Treat any exceptions during dumping as fatal."
 }, {
   "type" : "HOSTED",
-  "name" : "±DynamicCountersPrintGroupSeparator",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "DynamicCountersPrintGroupSeparator",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use grouping separators for number printing."
 }, {
   "type" : "HOSTED",
@@ -798,63 +798,63 @@
   "description" : "Resources describing program elements to be made available for reflection (see ProxyConfigurationFiles)."
 }, {
   "type" : "HOSTED",
-  "name" : "±DynamicProxyTracing",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DynamicProxyTracing",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable trace logging for dynamic proxy."
 }, {
   "type" : "HOSTED",
-  "name" : "±EagerSnippets",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "EagerSnippets",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Eagerly construct extra snippet info."
 }, {
   "type" : "HOSTED",
-  "name" : "±EarlyCodeEmissionOrder",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "EarlyCodeEmissionOrder",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable early code emission order computation instead of late code emission order computation."
 }, {
   "type" : "HOSTED",
-  "name" : "±EarlyGVN",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "EarlyGVN",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Perform early global value numbering."
 }, {
   "type" : "HOSTED",
-  "name" : "±EarlyLICM",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "EarlyLICM",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Perform early loop invariant code motion."
 }, {
   "type" : "HOSTED",
-  "name" : "±EmitStringSubstitutions",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "EmitStringSubstitutions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Emit substitutions for String methods."
 }, {
   "type" : "HOSTED",
-  "name" : "±EnableAllSecurityServices",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "EnableAllSecurityServices",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Add all security service classes to the generated image."
 }, {
   "type" : "HOSTED",
-  "name" : "±EnableLoggingFeature",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "EnableLoggingFeature",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable the feature that provides support for logging."
 }, {
   "type" : "HOSTED",
-  "name" : "±EnableSecurityServicesFeature",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "EnableSecurityServicesFeature",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable automatic registration of security services."
 }, {
   "type" : "HOSTED",
-  "name" : "±EnableSignalAPI",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "EnableSignalAPI",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enables the signal API (sun.misc.Signal or jdk.internal.misc.Signal). Defaults to false for shared library and true for executables."
 }, {
   "type" : "HOSTED",
@@ -864,15 +864,15 @@
   "description" : "List of comma separated URL protocols to enable."
 }, {
   "type" : "HOSTED",
-  "name" : "±EnableWildcardExpansion",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "EnableWildcardExpansion",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable wildcard expansion in command line arguments on Windows."
 }, {
   "type" : "HOSTED",
-  "name" : "±EnforceMaxRuntimeCompileMethods",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "EnforceMaxRuntimeCompileMethods",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enforce checking of maximum number of methods allowed for runtime compilation. Useful for checking in the gate that the number of methods does not go up without a good reason."
 }, {
   "type" : "HOSTED",
@@ -918,51 +918,51 @@
   "description" : "Regexp to match names of resources to be excluded from the image."
 }, {
   "type" : "HOSTED",
-  "name" : "±ExhaustiveHeapScan",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ExhaustiveHeapScan",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Scan all objects reachable from roots for analysis. By default false."
 }, {
   "type" : "HOSTED",
-  "name" : "±ExitAfterAnalysis",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ExitAfterAnalysis",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Exit after analysis."
 }, {
   "type" : "HOSTED",
-  "name" : "±ExitAfterCAPCache",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ExitAfterCAPCache",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Exit image generation after C Annotation Processor Cache creation."
 }, {
   "type" : "HOSTED",
-  "name" : "±ExitAfterQueryCodeGeneration",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ExitAfterQueryCodeGeneration",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Output query code for target platform without executing it."
 }, {
   "type" : "HOSTED",
-  "name" : "±ExitAfterRelocatableImageWrite",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ExitAfterRelocatableImageWrite",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Exit after writing relocatable file."
 }, {
   "type" : "HOSTED",
-  "name" : "±ExitVMOnException",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ExitVMOnException",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Alias for CompilationFailureActionExitVM."
 }, {
   "type" : "HOSTED",
-  "name" : "±ExtendedAsserts",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ExtendedAsserts",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable extended asserts which slow down analysis."
 }, {
   "type" : "HOSTED",
-  "name" : "±FailedLoopExplosionIsFatal",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "FailedLoopExplosionIsFatal",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Do not bail out but throw an exception on failed loop explosion."
 }, {
   "type" : "HOSTED",
@@ -1002,33 +1002,33 @@
   "description" : "A comma-separated list of fully qualified Feature implementation classes."
 }, {
   "type" : "HOSTED",
-  "name" : "±FloatingDivNodes",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "FloatingDivNodes",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Try to float non-constant division operations to expose global value numbering of divisions."
 }, {
   "type" : "HOSTED",
-  "name" : "±FoldSecurityManagerGetter",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "FoldSecurityManagerGetter",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Fold SecurityManager getter."
 }, {
   "type" : "HOSTED",
-  "name" : "±ForceAdversarialLayout",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ForceAdversarialLayout",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Place N-byte constants in the data section such that they are misaligned with respect to N*2. For example, place 4 byte constants at offset 4, 12 or 20, etc. This layout is used to detect instructions that load constants with alignment smaller than the fetch size. For instance, an XORPS instruction that does a 16-byte fetch of a 4-byte float not aligned to 16 bytes will cause a segfault."
 }, {
   "type" : "HOSTED",
-  "name" : "±ForceNoROSectionRelocations",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ForceNoROSectionRelocations",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Use only a writable native image heap (requires ld.gold linker)."
 }, {
   "type" : "HOSTED",
-  "name" : "±FullUnroll",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "FullUnroll",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
@@ -1062,15 +1062,15 @@
   "description" : "Start tracing compiled GC barriers after N garbage collections (disabled if N < 0)."
 }, {
   "type" : "HOSTED",
-  "name" : "±GatherSafepointStatistics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "GatherSafepointStatistics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Gather statistics about each safepoint."
 }, {
   "type" : "HOSTED",
-  "name" : "±GenLoopSafepoints",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "GenLoopSafepoints",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
@@ -1080,15 +1080,15 @@
   "description" : "Insert debug info into the generated native image or library."
 }, {
   "type" : "HOSTED",
-  "name" : "±GenericDynamicCounters",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "GenericDynamicCounters",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Turn on the benchmark counters, and displays the results on VM shutdown."
 }, {
   "type" : "HOSTED",
-  "name" : "±GraalArithmeticStubs",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "GraalArithmeticStubs",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use Graal arithmetic stubs instead of HotSpot stubs where possible."
 }, {
   "type" : "HOSTED",
@@ -1104,9 +1104,9 @@
   "description" : "Graal graph compression is performed when percent of live nodes falls below this value."
 }, {
   "type" : "HOSTED",
-  "name" : "±GreyToBlackObjRefDemographics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "GreyToBlackObjRefDemographics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Develop demographics of the object references visited."
 }, {
   "type" : "HOSTED",
@@ -1116,9 +1116,9 @@
   "description" : "Length of GreyToBlackObjectVisitor history for diagnostics. 0 implies no history is kept."
 }, {
   "type" : "HOSTED",
-  "name" : "±GuardPriorities",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "GuardPriorities",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
@@ -1134,27 +1134,27 @@
   "description" : "Control heap verifier verbosity level: 0 - quiet, 1 - info, 2 - warning, 3 - all."
 }, {
   "type" : "HOSTED",
-  "name" : "±HotSpotDeoptExplicitExceptions",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "HotSpotDeoptExplicitExceptions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Testing only option that forces deopts for exception throws."
 }, {
   "type" : "HOSTED",
-  "name" : "±HotSpotPostOnExceptions",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "HotSpotPostOnExceptions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Testing only option that forces deopts for exception throws."
 }, {
   "type" : "HOSTED",
-  "name" : "±HotSpotPrintInlining",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "HotSpotPrintInlining",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print inlining optimizations."
 }, {
   "type" : "HOSTED",
-  "name" : "±HybridStaticContext",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "HybridStaticContext",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable hybrid context for static methods, i.e. uses invocation site as context for static methods."
 }, {
   "type" : "HOSTED",
@@ -1164,9 +1164,9 @@
   "description" : "File for printing image build statistics."
 }, {
   "type" : "HOSTED",
-  "name" : "±ImageHeapCardMarking",
-  "dataType" : "STRING",
-  "defaultValue" : "None",
+  "name" : "ImageHeapCardMarking",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enables card marking for image heap objects, which arranges them in chunks. Automatically enabled when supported."
 }, {
   "type" : "HOSTED",
@@ -1200,21 +1200,21 @@
   "description" : "Common prefix used by method symbols in image."
 }, {
   "type" : "HOSTED",
-  "name" : "±IncludeAllLocales",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "IncludeAllLocales",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Make all hosted locales available at run time."
 }, {
   "type" : "HOSTED",
-  "name" : "±IncludeAllTimeZones",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "IncludeAllTimeZones",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "When true, all time zones will be pre-initialized in the image."
 }, {
   "type" : "HOSTED",
-  "name" : "±IncludeDebugHelperMethods",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "IncludeDebugHelperMethods",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Determines if debugging-specific helper methods are embedded into the image. Those methods can be called directly from the debugger to obtain or print additional information."
 }, {
   "type" : "HOSTED",
@@ -1224,15 +1224,15 @@
   "description" : "Comma separated list of locales to be included into the image. The default locale is included in the list automatically if not present."
 }, {
   "type" : "HOSTED",
-  "name" : "±IncludeMethodData",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "IncludeMethodData",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Include a list of methods included in the image for runtime inspection."
 }, {
   "type" : "HOSTED",
-  "name" : "±IncludeNodeSourcePositions",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "IncludeNodeSourcePositions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track NodeSourcePositions during runtime-compilation."
 }, {
   "type" : "HOSTED",
@@ -1260,15 +1260,15 @@
   "description" : "The garbage collection policy, either Adaptive (default) or BySpaceAndTime."
 }, {
   "type" : "HOSTED",
-  "name" : "±Inline",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "Inline",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable inlining."
 }, {
   "type" : "HOSTED",
-  "name" : "±InlineBeforeAnalysis",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlineBeforeAnalysis",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inline methods before static analysis."
 }, {
   "type" : "HOSTED",
@@ -1290,9 +1290,9 @@
   "description" : "Maximum number of computation nodes for method inlined before static analysis."
 }, {
   "type" : "HOSTED",
-  "name" : "±InlineDuringParsing",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlineDuringParsing",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inlines trivial methods during bytecode parsing."
 }, {
   "type" : "HOSTED",
@@ -1302,39 +1302,39 @@
   "description" : "Maximum depth when inlining during bytecode parsing."
 }, {
   "type" : "HOSTED",
-  "name" : "±InlineEverything",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "InlineEverything",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±InlineMegamorphicCalls",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlineMegamorphicCalls",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inline calls with megamorphic type profile (i.e., not all types could be recorded)."
 }, {
   "type" : "HOSTED",
-  "name" : "±InlineMonomorphicCalls",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlineMonomorphicCalls",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inline calls with monomorphic type profile."
 }, {
   "type" : "HOSTED",
-  "name" : "±InlinePartialIntrinsicExitDuringParsing",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlinePartialIntrinsicExitDuringParsing",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inlines partial intrinsic exits during bytecode parsing when possible. A partial intrinsic exit is a call within an intrinsic to the method being intrinsified and denotes semantics of the original method that the intrinsic does not support."
 }, {
   "type" : "HOSTED",
-  "name" : "±InlinePolymorphicCalls",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlinePolymorphicCalls",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inline calls with polymorphic type profile."
 }, {
   "type" : "HOSTED",
-  "name" : "±InlineVTableStubs",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlineVTableStubs",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
@@ -1350,21 +1350,21 @@
   "description" : "Path to the contents of the Inspect web server."
 }, {
   "type" : "HOSTED",
-  "name" : "±InstallExitHandlers",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "InstallExitHandlers",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Provide java.lang.Terminator exit handlers."
 }, {
   "type" : "HOSTED",
-  "name" : "±InterceptBailout",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "InterceptBailout",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Intercept also bailout exceptions."
 }, {
   "type" : "HOSTED",
-  "name" : "±InternalSymbolsAreGlobal",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "InternalSymbolsAreGlobal",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Compatibility option to make symbols used for the image heap global. Using global symbols is problematic for shared libraries because the loader implicitly changes the value when the symbol is already defined in the executable loading the library. Setting this option to true preserves the broken behavior of old Native Image versions."
 }, {
   "type" : "HOSTED",
@@ -1374,9 +1374,9 @@
   "description" : "The size of each internal thread stack, in bytes."
 }, {
   "type" : "HOSTED",
-  "name" : "±Intrinsify",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "Intrinsify",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use compiler intrinsifications."
 }, {
   "type" : "HOSTED",
@@ -1392,9 +1392,9 @@
   "description" : "Allow iterative peeling of loops up to this many times (each time the peeling phase runs)."
 }, {
   "type" : "HOSTED",
-  "name" : "±JNI",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "JNI",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable Java Native Interface (JNI) support."
 }, {
   "type" : "HOSTED",
@@ -1410,105 +1410,105 @@
   "description" : "Resources describing program elements to be made accessible via JNI (see JNIConfigurationFiles)."
 }, {
   "type" : "HOSTED",
-  "name" : "±JNIExportSymbols",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "JNIExportSymbols",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Export Invocation API symbols."
 }, {
   "type" : "HOSTED",
-  "name" : "±JNIVerboseLookupErrors",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "JNIVerboseLookupErrors",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Report information about known JNI elements when lookup fails."
 }, {
   "type" : "HOSTED",
-  "name" : "±LIRDynMoveProfileMethod",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIRDynMoveProfileMethod",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable dynamic move profiling per method."
 }, {
   "type" : "HOSTED",
-  "name" : "±LIROptConstantLoadOptimization",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptConstantLoadOptimization",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable constant load optimization."
 }, {
   "type" : "HOSTED",
-  "name" : "±LIROptControlFlowOptimizer",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptControlFlowOptimizer",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±LIROptEdgeMoveOptimizer",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptEdgeMoveOptimizer",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±LIROptLSRAEliminateSpillMoves",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptLSRAEliminateSpillMoves",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable spill move elimination."
 }, {
   "type" : "HOSTED",
-  "name" : "±LIROptLSRAOptimizeSpillPosition",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptLSRAOptimizeSpillPosition",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable spill position optimization."
 }, {
   "type" : "HOSTED",
-  "name" : "±LIROptLSStackSlotAllocator",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptLSStackSlotAllocator",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Use linear scan stack slot allocation."
 }, {
   "type" : "HOSTED",
-  "name" : "±LIROptNullCheckOptimizer",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptNullCheckOptimizer",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±LIROptRedundantMoveElimination",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptRedundantMoveElimination",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±LIROptStackMoveOptimizer",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptStackMoveOptimizer",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±LIROptimization",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "LIROptimization",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable LIR level optimizations."
 }, {
   "type" : "HOSTED",
-  "name" : "±LIRProfileMethods",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIRProfileMethods",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enables profiling of methods."
 }, {
   "type" : "HOSTED",
-  "name" : "±LIRProfileMoves",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIRProfileMoves",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enables profiling of move types on LIR level. Move types are for example stores (register to stack), constant loads (constant to register) or copies (register to register)."
 }, {
   "type" : "HOSTED",
-  "name" : "±LSRAOptSplitOnly",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LSRAOptSplitOnly",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "LSRA optimization: Only split but do not reassign."
 }, {
   "type" : "HOSTED",
-  "name" : "±LSRAOptimization",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LSRAOptimization",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable LSRA optimization."
 }, {
   "type" : "HOSTED",
@@ -1524,9 +1524,9 @@
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±LimitObjectArrayLength",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LimitObjectArrayLength",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable a limit for the number of objects recorded for each type of a type state before disabling heap sensitivity for that type. The analysis must be heap sensitive."
 }, {
   "type" : "HOSTED",
@@ -1548,21 +1548,21 @@
   "description" : "Path passed to the linker as the -rpath (list of comma-separated directories)."
 }, {
   "type" : "HOSTED",
-  "name" : "±ListCPUFeatures",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ListCPUFeatures",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Show CPU features specific to the target platform and exit."
 }, {
   "type" : "HOSTED",
-  "name" : "±ListMetrics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ListMetrics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Lists on the console at VM shutdown the metric names available to the Timers, Counters and MemUseTrackers options. Note that this only lists the metrics that were initialized during the VM execution and so will not include metrics for compiler code that is not executed."
 }, {
   "type" : "HOSTED",
-  "name" : "±LoadExceptionObjectInVM",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LoadExceptionObjectInVM",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Use a VM runtime call to load and clear the exception object from the thread at the start of a compiled exception handler."
 }, {
   "type" : "HOSTED",
@@ -1572,21 +1572,21 @@
   "description" : "Regular expressions matching which bundles should be compressed."
 }, {
   "type" : "HOSTED",
-  "name" : "±LocalizationCompressInParallel",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "LocalizationCompressInParallel",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Compress the bundles in parallel."
 }, {
   "type" : "HOSTED",
-  "name" : "±LocalizationOptimizedMode",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LocalizationOptimizedMode",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Optimize the resource bundle lookup using a simple map."
 }, {
   "type" : "HOSTED",
-  "name" : "±LocalizationSubstituteLoadLookup",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "LocalizationSubstituteLoadLookup",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Store the resource bundle content more efficiently in the fallback mode."
 }, {
   "type" : "HOSTED",
@@ -1602,9 +1602,9 @@
   "description" : "File to which logging is sent. A %p in the name will be replaced with a string identifying the process, usually the process id and %t will be replaced by System.currentTimeMillis(). If the current runtime is in an isolate, then %i will be replaced by '<isolate id>' otherwise %i is removed. An %I is the same as %i except that the replacement is '<isolate id>@<isolate address>'. Using %o as filename sends logging to System.out whereas %e sends logging to System.err."
 }, {
   "type" : "HOSTED",
-  "name" : "±LogVerbose",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LogVerbose",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable more verbose log output when available."
 }, {
   "type" : "HOSTED",
@@ -1626,27 +1626,27 @@
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±LoopPeeling",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "LoopPeeling",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±LoopPredication",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "LoopPredication",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Hoists array bounds checks out of simple loops. This is ignored if SpeculativeGuardMovement is enabled."
 }, {
   "type" : "HOSTED",
-  "name" : "±LoopPredicationMainPath",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "LoopPredicationMainPath",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Restricts LoopPredication to only focus on array bounds checks that dominate the back edge of a loop."
 }, {
   "type" : "HOSTED",
-  "name" : "±LoopUnswitch",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "LoopUnswitch",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
@@ -1686,9 +1686,9 @@
   "description" : "Number of nodes allowed for a loop unswitching regardless of the loop frequency."
 }, {
   "type" : "HOSTED",
-  "name" : "±MatchExpressions",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "MatchExpressions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Allow backend to match complex expressions."
 }, {
   "type" : "HOSTED",
@@ -1842,9 +1842,9 @@
   "description" : "Pattern for matching methods. The syntax for a pattern is:."
 }, {
   "type" : "HOSTED",
-  "name" : "±MethodFilterRootOnly",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "MethodFilterRootOnly",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Only check MethodFilter against the root method in the context if true, otherwise check all methods."
 }, {
   "type" : "HOSTED",
@@ -1896,15 +1896,15 @@
   "description" : "Module containing the class that contains the main entry point. Optional if --shared is used."
 }, {
   "type" : "HOSTED",
-  "name" : "±MoveGuardsUpwards",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "MoveGuardsUpwards",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Move guard nodes to earlier places in the dominator tree if all successors of basic block share a common guard condition."
 }, {
   "type" : "HOSTED",
-  "name" : "±MultiThreaded",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "MultiThreaded",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable support for threads and and thread-local variables (disable for single-threaded implementation)."
 }, {
   "type" : "HOSTED",
@@ -1920,9 +1920,9 @@
   "description" : "Name of the output file to be generated."
 }, {
   "type" : "HOSTED",
-  "name" : "±NativeArchitecture",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "NativeArchitecture",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Overrides CPUFeatures and uses the native architecture, i.e., the architecture of a machine that builds an image. NativeArchitecture takes precedence over CPUFeatures."
 }, {
   "type" : "HOSTED",
@@ -1938,15 +1938,15 @@
   "description" : "Pattern for disabling inlining of methods during image generation."
 }, {
   "type" : "HOSTED",
-  "name" : "±NewCAPCache",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "NewCAPCache",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Create a C Annotation Processor Cache. Will erase any previous cache at that same location."
 }, {
   "type" : "HOSTED",
-  "name" : "±NodeCounters",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "NodeCounters",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Counts the number of instances of each node class."
 }, {
   "type" : "HOSTED",
@@ -1974,81 +1974,81 @@
   "description" : "Comma separated list of candidate GNU objdump executables. If not specified, disassembling via GNU objdump is disabled. Otherwise, the first existing executable in the list is used."
 }, {
   "type" : "HOSTED",
-  "name" : "±OmitHotExceptionStacktrace",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "OmitHotExceptionStacktrace",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±OmitInlinedMethodDebugLineInfo",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OmitInlinedMethodDebugLineInfo",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Omit generation of DebugLineInfo originating from inlined methods."
 }, {
   "type" : "HOSTED",
-  "name" : "±OptAssumptions",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptAssumptions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±OptConvertDeoptsToGuards",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptConvertDeoptsToGuards",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±OptDeoptimizationGrouping",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptDeoptimizationGrouping",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±OptDevirtualizeInvokesOptimistically",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptDevirtualizeInvokesOptimistically",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±OptEarlyReadElimination",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptEarlyReadElimination",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±OptEliminateGuards",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptEliminateGuards",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±OptFloatingReads",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptFloatingReads",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±OptImplicitNullChecks",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptImplicitNullChecks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±OptReadElimination",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptReadElimination",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±OptScheduleOutOfLoops",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptScheduleOutOfLoops",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±OptStaticFinalFieldFolding",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptStaticFinalFieldFolding",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Optimize static final fields that get a constant assigned in the class initializer."
 }, {
   "type" : "HOSTED",
@@ -2064,27 +2064,27 @@
   "description" : "Define PageSize of a machine that runs the image. The default 0 ( same as host machine page size)."
 }, {
   "type" : "HOSTED",
-  "name" : "±ParseOnce",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ParseOnce",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "When true, compiler graphs are parsed only once before static analysis. When false, compiler graphs are parsed for static analysis and again for AOT compilation."
 }, {
   "type" : "HOSTED",
-  "name" : "±ParseRuntimeOptions",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ParseRuntimeOptions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Parse and consume standard options and system properties from the command line arguments when the VM is created."
 }, {
   "type" : "HOSTED",
-  "name" : "±PartialEscapeAnalysis",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "PartialEscapeAnalysis",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±PartialUnroll",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "PartialUnroll",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
@@ -2094,15 +2094,15 @@
   "description" : "Directory of the image file to be generated."
 }, {
   "type" : "HOSTED",
-  "name" : "±PeelALot",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PeelALot",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±PlatformInterfaceCompatibilityMode",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PlatformInterfaceCompatibilityMode",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable the behavior of old GraalVM versions. When enabled, interfaces not available for the current platform are filtered."
 }, {
   "type" : "HOSTED",
@@ -2118,21 +2118,21 @@
   "description" : "Resources describing predefined classes that can be loaded at runtime."
 }, {
   "type" : "HOSTED",
-  "name" : "±PreserveFramePointer",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PreserveFramePointer",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Saves stack base pointer on the stack on method entry."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintAOTCompilation",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintAOTCompilation",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print logging information during compilation."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintAnalysisCallTree",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintAnalysisCallTree",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print analysis call tree, a breadth-first tree reduction of the call graph."
 }, {
   "type" : "HOSTED",
@@ -2142,27 +2142,27 @@
   "description" : "Change the output format of the analysis call tree, available options are TXT and CSV. See: Reports.md."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintAnalysisStatistics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintAnalysisStatistics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print analysis results statistics."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintBackendCFG",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintBackendCFG",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable dumping scheduled HIR, LIR, register allocation and code generation info to the C1Visualizer."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintBlockMapping",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintBlockMapping",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable dumping CFG built during initial BciBlockMapping."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintCallEdges",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintCallEdges",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print call edges with other analysis results statistics."
 }, {
   "type" : "HOSTED",
@@ -2172,27 +2172,27 @@
   "description" : "Choose format used when dumping canonical text for graphs: 0 gives a scheduled graph (better for spotting changes involving the schedule) while 1 gives a CFG containing expressions rooted at fixed nodes (better for spotting small structure differences)."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintCanonicalGraphStrings",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintCanonicalGraphStrings",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable dumping canonical text from for graphs."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintClassInitialization",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintClassInitialization",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Prints class initialization info for all classes detected by analysis."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintCompilation",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintCompilation",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print an informational line to the console for each completed compilation."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintFeatures",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintFeatures",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print a list of active features."
 }, {
   "type" : "HOSTED",
@@ -2214,9 +2214,9 @@
   "description" : "Where IdealGraphVisualizer graph dumps triggered by Dump or DumpOnError should be written."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintGraphFile",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "PrintGraphFile",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Setting to true sets PrintGraphfile, setting to false sets PrintGraphnetwork."
 }, {
   "type" : "HOSTED",
@@ -2232,123 +2232,123 @@
   "description" : "Port part of the address to which graphs are dumped in binary format."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintGraphWithSchedule",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintGraphWithSchedule",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Schedule graphs as they are dumped."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintHeapHistogram",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintHeapHistogram",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print class statistics of native image heap."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintIRWithLIR",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintIRWithLIR",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print HIR along side LIR as the latter is generated."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintImageElementSizes",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintImageElementSizes",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print the sizes of the elements of the built image."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintImageHeapPartitionSizes",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintImageHeapPartitionSizes",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print the sizes of the native image heap as the image is built."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintImageObjectTree",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintImageObjectTree",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print image object hierarchy."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintJNIMethods",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintJNIMethods",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print JNI methods added to generated image."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintLIRWithAssembly",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintLIRWithAssembly",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Include the LIR as comments with the final assembly."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintMethodHistogram",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintMethodHistogram",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print statistics of methods in native image heap."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintPointsToStatistics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintPointsToStatistics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Report analysis statistics."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintProfilingInformation",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintProfilingInformation",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print profiling information when parsing a method's bytecode."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintRestrictHeapAccessPath",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "PrintRestrictHeapAccessPath",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Print path for @RestrictHeapAccess warnings."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintRestrictHeapAccessWarnings",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "PrintRestrictHeapAccessWarnings",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Print warnings for @RestrictHeapAccess annotations."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintRuntimeCompileMethods",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintRuntimeCompileMethods",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print call tree of methods available for runtime compilation."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintStaticTruffleBoundaries",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintStaticTruffleBoundaries",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print truffle boundaries found during the analysis."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintSynchronizedAnalysis",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintSynchronizedAnalysis",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print types used for Java synchronization."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintUninterruptibleCalleeDOTGraph",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintUninterruptibleCalleeDOTGraph",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print (to stderr) a DOT graph of the @Uninterruptible annotations."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintUniverse",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintUniverse",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print information about classes, methods, and fields that are present in the native image."
 }, {
   "type" : "HOSTED",
-  "name" : "±PrintUnmodifiedGraphs",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "PrintUnmodifiedGraphs",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Dump a graph even if it has not changed since it was last dumped. Change detection is based on adding and deleting nodes or changing inputs."
 }, {
   "type" : "HOSTED",
-  "name" : "±ProfileAllocations",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ProfileAllocations",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable profiling of allocation sites."
 }, {
   "type" : "HOSTED",
@@ -2358,33 +2358,33 @@
   "description" : "Control the naming and granularity of the counters when using ProfileAllocations."
 }, {
   "type" : "HOSTED",
-  "name" : "±ProfileAnalysisOperations",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ProfileAnalysisOperations",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track the progress of the static analysis."
 }, {
   "type" : "HOSTED",
-  "name" : "±ProfileCompiledMethods",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ProfileCompiledMethods",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±ProfileConstantObjects",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ProfileConstantObjects",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track the creation of constant objects."
 }, {
   "type" : "HOSTED",
-  "name" : "±ProfileDeoptimization",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ProfileDeoptimization",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print logging information during object file writing."
 }, {
   "type" : "HOSTED",
-  "name" : "±ProfileMonitors",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ProfileMonitors",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable profiling of monitor operations."
 }, {
   "type" : "HOSTED",
@@ -2394,9 +2394,9 @@
   "description" : "Directory where query code for target platform should be output."
 }, {
   "type" : "HOSTED",
-  "name" : "±RawConditionalElimination",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "RawConditionalElimination",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
@@ -2406,15 +2406,15 @@
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±ReassociateExpressions",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ReassociateExpressions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Re-associate loop invariants and constants."
 }, {
   "type" : "HOSTED",
-  "name" : "±ReduceDCE",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ReduceDCE",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Disable optional dead code eliminations."
 }, {
   "type" : "HOSTED",
@@ -2430,9 +2430,9 @@
   "description" : "Resources describing program elements to be made available for reflection (see ReflectionConfigurationFiles)."
 }, {
   "type" : "HOSTED",
-  "name" : "±ReflectionPluginTracing",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ReflectionPluginTracing",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable trace logging for reflection plugins."
 }, {
   "type" : "HOSTED",
@@ -2442,33 +2442,33 @@
   "description" : "Comma separated list of registers that register allocation is limited to."
 }, {
   "type" : "HOSTED",
-  "name" : "±RelaxTypeFlowStateConstraints",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "RelaxTypeFlowStateConstraints",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Allow a type flow state to contain types not compatible with its declared type."
 }, {
   "type" : "HOSTED",
-  "name" : "±RemoveNeverExecutedCode",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "RemoveNeverExecutedCode",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±RemoveSaturatedTypeFlows",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "RemoveSaturatedTypeFlows",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable the type flow saturation analysis performance optimization."
 }, {
   "type" : "HOSTED",
-  "name" : "±RemoveUnusedSymbols",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "RemoveUnusedSymbols",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use linker option to prevent unreferenced symbols in image."
 }, {
   "type" : "HOSTED",
-  "name" : "±ReplaceInputsWithConstantsBasedOnStamps",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ReplaceInputsWithConstantsBasedOnStamps",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
@@ -2478,27 +2478,27 @@
   "description" : "Report error if <typename>[:<UsageKind>{,<UsageKind>}] is discovered during analysis (valid values for UsageKind: InHeap, Allocated, Reachable)."
 }, {
   "type" : "HOSTED",
-  "name" : "±ReportExceptionStackTraces",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ReportExceptionStackTraces",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Show exception stack traces for exceptions during image building.)."
 }, {
   "type" : "HOSTED",
-  "name" : "±ReportPerformedSubstitutions",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ReportPerformedSubstitutions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Report performed substitutions."
 }, {
   "type" : "HOSTED",
-  "name" : "±ReportUnsafeOffsetWarnings",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ReportUnsafeOffsetWarnings",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print unsafe operation offset warnings.)."
 }, {
   "type" : "HOSTED",
-  "name" : "±ReportUnsupportedElementsAtRuntime",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ReportUnsupportedElementsAtRuntime",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Report usage of unsupported methods and fields at run time when they are accessed the first time, instead of as an error during image building."
 }, {
   "type" : "HOSTED",
@@ -2514,15 +2514,15 @@
   "description" : "Resources describing Java resources to be included in the image."
 }, {
   "type" : "HOSTED",
-  "name" : "±ReturnAfterAnalysis",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ReturnAfterAnalysis",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Return after analysis."
 }, {
   "type" : "HOSTED",
-  "name" : "±RunReachabilityHandlersConcurrently",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "RunReachabilityHandlersConcurrently",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Run reachability handlers concurrently during analysis."
 }, {
   "type" : "HOSTED",
@@ -2538,15 +2538,15 @@
   "description" : "Comma separated list of CPU features that will be enabled for runtime checks. The native image may check at run time if such features are supported by the target CPU, and can optimize certain operations based on this information. If a feature is not supported at run time, a less optimized variant will be executed. Because of the presence of multiple code variants, enabling runtime features can result in larger executables. To completely turn off runtime checked CPU features, set this option to the empty string. The specific options available are target platform dependent. See --list-cpu-features for feature list. The default values are: AMD64: 'AVX,AVX2'; AArch64: ''."
 }, {
   "type" : "HOSTED",
-  "name" : "±RuntimeSystemAssertions",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "RuntimeSystemAssertions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable or disable Java system assertions at run time."
 }, {
   "type" : "HOSTED",
-  "name" : "±ScanObjectsParallel",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ScanObjectsParallel",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Object scanning in parallel."
 }, {
   "type" : "HOSTED",
@@ -2586,9 +2586,9 @@
   "description" : "Comma-separated list of services that should be excluded."
 }, {
   "type" : "HOSTED",
-  "name" : "±SharedLibrary",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "SharedLibrary",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Build shared library."
 }, {
   "type" : "HOSTED",
@@ -2598,21 +2598,21 @@
   "description" : "Writes to the VM log information about the compiler configuration selected."
 }, {
   "type" : "HOSTED",
-  "name" : "±ShowDumpFiles",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ShowDumpFiles",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print the name of each dump file path as it's created."
 }, {
   "type" : "HOSTED",
-  "name" : "±ShowSubstitutionSourceInfo",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ShowSubstitutionSourceInfo",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Controls whether the source position information of snippets and method substitutions are exposed to HotSpot. Can be useful when profiling to get more precise position information."
 }, {
   "type" : "HOSTED",
-  "name" : "±SimpleFastInflatedLocking",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "SimpleFastInflatedLocking",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Handle simple cases for inflated monitors in the fast-path."
 }, {
   "type" : "HOSTED",
@@ -2622,9 +2622,9 @@
   "description" : "If the previous low-level graph size of the method exceeds the threshold, it is not inlined."
 }, {
   "type" : "HOSTED",
-  "name" : "±SnippetCounters",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "SnippetCounters",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable counters for various paths in snippets."
 }, {
   "type" : "HOSTED",
@@ -2634,9 +2634,9 @@
   "description" : "Soft references: this number of milliseconds multiplied by the free heap memory in MByte is the time span for which a soft reference will keep its referent alive after its last access."
 }, {
   "type" : "HOSTED",
-  "name" : "±SourceLevelDebug",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "SourceLevelDebug",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Preserve the local variable information for every Java source line to allow line-by-line stepping in the debugger. Allow the lookup of Java-level method information, e.g., in stack traces."
 }, {
   "type" : "HOSTED",
@@ -2646,9 +2646,9 @@
   "description" : "Constrain debug info generation to the comma-separated list of package prefixes given to this option."
 }, {
   "type" : "HOSTED",
-  "name" : "±SpawnIsolates",
-  "dataType" : "STRING",
-  "defaultValue" : "<string>*",
+  "name" : "SpawnIsolates",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Support multiple isolates."
 }, {
   "type" : "HOSTED",
@@ -2658,15 +2658,15 @@
   "description" : "Select a strategy to mitigate speculative bounds check bypass (aka Spectre-PHT or Spectre V1)."
 }, {
   "type" : "HOSTED",
-  "name" : "±SpectrePHTIndexMasking",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "SpectrePHTIndexMasking",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Mask indices to scope access to allocation size after bounds check."
 }, {
   "type" : "HOSTED",
-  "name" : "±SpeculativeGuardMovement",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "SpeculativeGuardMovement",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Move loop invariant guards (e.g., array bounds checks) out of loops."
 }, {
   "type" : "HOSTED",
@@ -2676,9 +2676,9 @@
   "description" : "Size (in bytes) of the red zone reserved at the end of the stack. This stack space can only be used by critical VM code and C code, e.g., to report fatal errors."
 }, {
   "type" : "HOSTED",
-  "name" : "±StackTrace",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "StackTrace",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Provide method names for stack traces."
 }, {
   "type" : "HOSTED",
@@ -2688,51 +2688,51 @@
   "description" : "Size (in bytes) of the yellow zone reserved at the end of the stack. This stack space is reserved for VM use and cannot be used by the application."
 }, {
   "type" : "HOSTED",
-  "name" : "±StaticExecutable",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "StaticExecutable",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Build statically linked executable (requires static libc and zlib)."
 }, {
   "type" : "HOSTED",
-  "name" : "±StaticExecutableWithDynamicLibC",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "StaticExecutableWithDynamicLibC",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Builds a statically linked executable with libc dynamically linked."
 }, {
   "type" : "HOSTED",
-  "name" : "±StressExplicitExceptionCode",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "StressExplicitExceptionCode",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Stress the code emitting explicit exception throwing code."
 }, {
   "type" : "HOSTED",
-  "name" : "±StressInvokeWithExceptionNode",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "StressInvokeWithExceptionNode",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Stress the code emitting invokes with explicit exception edges."
 }, {
   "type" : "HOSTED",
-  "name" : "±StressTestEarlyReads",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "StressTestEarlyReads",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Stress the code by emitting reads at earliest instead of latest point."
 }, {
   "type" : "HOSTED",
-  "name" : "±StrictConfiguration",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "StrictConfiguration",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Causes unknown attributes in configuration objects to abort the image build instead of emitting a warning."
 }, {
   "type" : "HOSTED",
-  "name" : "±StrictDeoptInsertionChecks",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "StrictDeoptInsertionChecks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Perform checks that guards and deopts aren't introduced in graphs that should handle exceptions explicitly."
 }, {
   "type" : "HOSTED",
-  "name" : "±StrictQueryCodeCompilation",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "StrictQueryCodeCompilation",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use strict checks when performing query code compilation."
 }, {
   "type" : "HOSTED",
@@ -2748,51 +2748,51 @@
   "description" : "For internal usage. Instead, use the equivalent property 'jdk.virtualThreadScheduler.parallelism' as specified by JEP 425 Virtual Threads (Project Loom)."
 }, {
   "type" : "HOSTED",
-  "name" : "±SupportCompileInIsolates",
-  "dataType" : "STRING",
-  "defaultValue" : "None",
+  "name" : "SupportCompileInIsolates",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Support runtime compilation in separate isolates (enable at runtime with option CompileInIsolates)."
 }, {
   "type" : "HOSTED",
-  "name" : "±SupportContinuations",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "SupportContinuations",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Support continuations (without requiring a Project Loom JDK)."
 }, {
   "type" : "HOSTED",
-  "name" : "±SupportJsrBytecodes",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "SupportJsrBytecodes",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±SupportOSRWithLocks",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "SupportOSRWithLocks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Support OSR compilations with locks. If DeoptAfterOSR is true we can per definition not have unbalanced enter/exits mappings. If DeoptAfterOSR is false insert artificial monitor enters after the OSRStart to have balanced enter/exits in the graph."
 }, {
   "type" : "HOSTED",
-  "name" : "±SupportPredefinedClasses",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "SupportPredefinedClasses",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable support for predefining additional classes."
 }, {
   "type" : "HOSTED",
-  "name" : "±SupportRecurringCallback",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "SupportRecurringCallback",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Support a per-thread timer that is called at a specific interval."
 }, {
   "type" : "HOSTED",
-  "name" : "±SuppressStderr",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "SuppressStderr",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Suppress console error output for unittests."
 }, {
   "type" : "HOSTED",
-  "name" : "±SuppressStdout",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "SuppressStdout",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Suppress console normal output for unittests."
 }, {
   "type" : "HOSTED",
@@ -2808,9 +2808,9 @@
   "description" : "Directory for temporary files generated during native image generation. If this option is specified, the temporary files are not deleted so that you can inspect them after native image generation."
 }, {
   "type" : "HOSTED",
-  "name" : "±ThrowUnsafeOffsetErrors",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ThrowUnsafeOffsetErrors",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Throw unsafe operation offset errors.)."
 }, {
   "type" : "HOSTED",
@@ -2844,33 +2844,33 @@
   "description" : "Comma-separated list of fully-qualified class names that class initialization is traced for."
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceEscapeAnalysis",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceEscapeAnalysis",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceExceptionHandlerStub",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceExceptionHandlerStub",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Trace execution of stub used to handle an exception thrown by a callee."
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceInlineDuringParsing",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceInlineDuringParsing",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Traces inlining performed during bytecode parsing."
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceInlining",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceInlining",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable tracing of inlining decisions."
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceInliningForStubsAndSnippets",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceInliningForStubsAndSnippets",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable inlining decision tracing in stubs and snippets."
 }, {
   "type" : "HOSTED",
@@ -2880,15 +2880,15 @@
   "description" : "The trace level for the LIR generator."
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceLocalizationFeature",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceLocalizationFeature",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "When enabled, localization feature details are printed."
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceLoggingFeature",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceLoggingFeature",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "When enabled, logging feature details are printed."
 }, {
   "type" : "HOSTED",
@@ -2904,9 +2904,9 @@
   "description" : "Trace monitor operations on objects whose type contains this substring."
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceNativeToolUsage",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceNativeToolUsage",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Trace all native tool invocations as part of image building."
 }, {
   "type" : "HOSTED",
@@ -2916,45 +2916,45 @@
   "description" : "Comma-separated list of fully-qualified class names that object instantiation is traced for."
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceParserPlugins",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceParserPlugins",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Traces use of plugins during bytecode parsing."
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceSecurityServices",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceSecurityServices",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable tracing of security services automatic registration."
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceServiceLoaderFeature",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceServiceLoaderFeature",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "When enabled, each service loader resource and class will be printed out to standard output."
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceUnwindStub",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceUnwindStub",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Trace execution of the stub that routes an exception to a handler in the calling frame."
 }, {
   "type" : "HOSTED",
-  "name" : "±TraceVMOperations",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceVMOperations",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Trace VMOperation execution."
 }, {
   "type" : "HOSTED",
-  "name" : "±TrackAccessChain",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TrackAccessChain",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track the callers for methods and accessing methods for fields."
 }, {
   "type" : "HOSTED",
-  "name" : "±TrackInputFlows",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TrackInputFlows",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track the input for type flows."
 }, {
   "type" : "HOSTED",
@@ -2964,21 +2964,21 @@
   "description" : "Pattern for specifying scopes in which memory use tracking is enabled. See the Dump option for the pattern syntax. An empty value enables all memory use trackers unconditionally."
 }, {
   "type" : "HOSTED",
-  "name" : "±TrackNodeInsertion",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TrackNodeInsertion",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track source stack trace where a node was inserted into the graph."
 }, {
   "type" : "HOSTED",
-  "name" : "±TrackNodeSourcePosition",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TrackNodeSourcePosition",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track the NodeSourcePosition."
 }, {
   "type" : "HOSTED",
-  "name" : "±TreatRuntimeCodeInfoReferencesAsWeak",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "TreatRuntimeCodeInfoReferencesAsWeak",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Determines if references from runtime-compiled code to Java heap objects should be treated as strong or weak."
 }, {
   "type" : "HOSTED",
@@ -2988,27 +2988,27 @@
   "description" : "Graphs with less than this number of nodes are trivial and therefore always inlined."
 }, {
   "type" : "HOSTED",
-  "name" : "±TruffleCheckBlackListedMethods",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "TruffleCheckBlackListedMethods",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Fail if a method known as not suitable for partial evaluation is reachable for runtime compilation."
 }, {
   "type" : "HOSTED",
-  "name" : "±TruffleCheckBlockListMethods",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "TruffleCheckBlockListMethods",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Fail if a method known as not suitable for partial evaluation is reachable for runtime compilation."
 }, {
   "type" : "HOSTED",
-  "name" : "±TruffleCheckFrameImplementation",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "TruffleCheckFrameImplementation",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enforce that the Truffle runtime provides the only implementation of Frame."
 }, {
   "type" : "HOSTED",
-  "name" : "±TruffleCheckNeverPartOfCompilation",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "TruffleCheckNeverPartOfCompilation",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Check that CompilerAsserts.neverPartOfCompilation is not reachable for runtime compilation."
 }, {
   "type" : "HOSTED",
@@ -3018,9 +3018,9 @@
   "description" : "Select a compiler configuration for Truffle compilation (default: use Graal system compiler configuration)."
 }, {
   "type" : "HOSTED",
-  "name" : "±TruffleHostInlining",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "TruffleHostInlining",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Whether Truffle host inlining is enabled."
 }, {
   "type" : "HOSTED",
@@ -3042,33 +3042,33 @@
   "description" : "Determines the maximum call depth for exploration during host inlining."
 }, {
   "type" : "HOSTED",
-  "name" : "±TruffleHostInliningPrintExplored",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TruffleHostInliningPrintExplored",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "When logging is activated for this phase enables printing of only explored, but ultimately not inlined call trees."
 }, {
   "type" : "HOSTED",
-  "name" : "±TruffleInlineDuringParsing",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "TruffleInlineDuringParsing",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inline trivial methods in Truffle graphs during native image generation."
 }, {
   "type" : "HOSTED",
-  "name" : "±TruffleMultiThreaded",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "TruffleMultiThreaded",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable support for Truffle background compilation."
 }, {
   "type" : "HOSTED",
-  "name" : "±TrufflePropagateCompilationErrors",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TrufflePropagateCompilationErrors",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Propagate Truffle compilation errors."
 }, {
   "type" : "HOSTED",
-  "name" : "±TrustFinalDefaultFields",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "TrustFinalDefaultFields",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Determines whether to treat final fields with default values as constant."
 }, {
   "type" : "HOSTED",
@@ -3090,9 +3090,9 @@
   "description" : "The maximum number of types recorded in a type flow. -1 indicates no limitation."
 }, {
   "type" : "HOSTED",
-  "name" : "±UnresolvedIsError",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UnresolvedIsError",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Report unresolved elements as errors."
 }, {
   "type" : "HOSTED",
@@ -3108,81 +3108,81 @@
   "description" : "Unsafe automatic substitutions logging level: Disabled0, Basic1, Info2, Debug3.)."
 }, {
   "type" : "HOSTED",
-  "name" : "±UnsafeOffsetWarningsAreFatal",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UnsafeOffsetWarningsAreFatal",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print unsafe operation offset warnings.)."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseApplicationCodeSourceLocation",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UseApplicationCodeSourceLocation",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Return the application path as the Class.getProtectionDomain().getCodeSource().getLocation() for all classes that have no explicit ProtectionDomain."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseBranchesWithin32ByteBoundary",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UseBranchesWithin32ByteBoundary",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Force branch instructions to align with 32-bytes boundary, to mitigate the jcc erratum. See https://www.intel.com/content/dam/support/us/en/documents/processors/mitigations-jump-conditional-code-erratum.pdf for more details. If not set explicitly, the default value will be determined according to the CPU model."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseCAPCache",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UseCAPCache",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Indicate the C Annotation Processor to use previously cached native information when generating C Type information."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseCalleeSavedRegisters",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseCalleeSavedRegisters",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use callee saved registers to reduce spilling for low-frequency calls to stubs (if callee saved registers are supported by the architecture)."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseCompilationStatistics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UseCompilationStatistics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enables CompilationStatistics."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseCompressedFrameEncodings",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseCompressedFrameEncodings",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use compressed frame encoding for frames without local values."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseContainerSupport",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseContainerSupport",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable detection and runtime container configuration support."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseDedicatedVMOperationThread",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UseDedicatedVMOperationThread",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Determines if VM operations should be executed in a dedicated thread."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseDirectCallTrampolinesALot",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UseDirectCallTrampolinesALot",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Force many trampolines to be needed for inter-method calls. Normally trampolines are only used when a method destination is outside the range of a pc-relative branch instruction."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseEpsilonGC",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UseEpsilonGC",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Use a no-op GC."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseExceptionProbability",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseExceptionProbability",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±UseGraalStubs",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseGraalStubs",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use Graal-generated stubs for complicated LIR operations instead of embedding all the emitted code."
 }, {
   "type" : "HOSTED",
@@ -3192,69 +3192,69 @@
   "description" : "Selects the libc implementation to use. Available implementations: glibc, musl, bionic."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseLoom",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UseLoom",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Build with Project Loom JDK."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseLoopEndFrequencies",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UseLoopEndFrequencies",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Derive loop frequencies only from backedge frequencies instead of from loop exit frequencies."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseLoopLimitChecks",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseLoopLimitChecks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±UseNullRegion",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseNullRegion",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Determines if a null region is present between the heap base and the image heap."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseRememberedSet",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseRememberedSet",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Determines if a remembered sets is used, which is necessary for collecting the young and old generation independently."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseSerialGC",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseSerialGC",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use a serial GC."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseServiceLoaderFeature",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseServiceLoaderFeature",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Automatically register services for run-time lookup using ServiceLoader."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseSnippetGraphCache",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseSnippetGraphCache",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use a cache for snippet graphs."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseSnippetTemplateCache",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseSnippetTemplateCache",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use a LRU cache for snippet templates."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseTrappingNullChecks",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseTrappingNullChecks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use traps for null checks instead of explicit null-checks."
 }, {
   "type" : "HOSTED",
-  "name" : "±UseTypeCheckHints",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseTypeCheckHints",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "HOSTED",
@@ -3264,117 +3264,117 @@
   "description" : "Pattern for specifying scopes in which logging is enabled. See the Dump option for the pattern syntax."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyBalancedMonitors",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyBalancedMonitors",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Emit extra code to dynamically check monitor operations are balanced."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyDeoptimizationEntryPoints",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyDeoptimizationEntryPoints",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Verify that all possible deoptimization entry points have been properly compiled and registered in the metadata."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyGraalGraphEdges",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyGraalGraphEdges",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Perform expensive verification of graph inputs, usages, successors and predecessors."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyGraalGraphs",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "VerifyGraalGraphs",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Verify graphs often during compilation when assertions are turned on."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyGraalPhasesSize",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyGraalPhasesSize",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Verify before - after relation of the relative, computed, code size of a graph."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyHeap",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyHeap",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Verify the heap before and after each collection."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyHeapAtReturn",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyHeapAtReturn",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Perform platform dependent validation of the Java heap at returns."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyKillCFGUnusedNodes",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyKillCFGUnusedNodes",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Verify that there are no new unused nodes when performing killCFG."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyNamingConventions",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyNamingConventions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Verify naming conventions during image construction."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyPhases",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyPhases",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyReferences",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "VerifyReferences",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Verify all object references if VerifyHeap is enabled."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyRememberedSet",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "VerifyRememberedSet",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Verify the remembered set if VerifyHeap is enabled."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyTypes",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyTypes",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Verify type states computed by the static analysis at run time. This is useful when diagnosing problems in the static analysis, but reduces peak performance significantly."
 }, {
   "type" : "HOSTED",
-  "name" : "±VerifyWriteBarriers",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyWriteBarriers",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Verify write barriers."
 }, {
   "type" : "HOSTED",
-  "name" : "±WarnMissingIntrinsic",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "WarnMissingIntrinsic",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print a warning when a missing intrinsic is seen."
 }, {
   "type" : "HOSTED",
-  "name" : "±ZapChunks",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ZapChunks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Fill unused memory chunks with a sentinel value."
 }, {
   "type" : "HOSTED",
-  "name" : "±ZapConsumedHeapChunks",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ZapConsumedHeapChunks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "After use, Fill memory chunks with a sentinel value."
 }, {
   "type" : "HOSTED",
-  "name" : "±ZapProducedHeapChunks",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ZapProducedHeapChunks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Before use, fill memory chunks with a sentinel value."
 }, {
   "type" : "HOSTED",
-  "name" : "±ZapStackOnMethodEntry",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ZapStackOnMethodEntry",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
@@ -3384,9 +3384,9 @@
   "description" : "Enables instruction profiling on assembler level. Valid values are a comma separated list of supported instructions. Compare with subclasses of Assembler.InstructionCounter."
 }, {
   "type" : "RUNTIME",
-  "name" : "±AbortOnBenchmarkCounterOverflow",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AbortOnBenchmarkCounterOverflow",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Abort VM with SIGILL if benchmark counters controlled by the (Generic|Timed|Benchmark)DynamicCounters."
 }, {
   "type" : "RUNTIME",
@@ -3402,9 +3402,9 @@
   "description" : "File to which aggregated metrics are dumped at shutdown. A CSV format is used if the file ends with .csv otherwise a more human readable format is used. If not specified, metrics are dumped to the console."
 }, {
   "type" : "RUNTIME",
-  "name" : "±AliasArrayTypeFlows",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "AliasArrayTypeFlows",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Model all array type flows using a unique elements type flow abstraction."
 }, {
   "type" : "RUNTIME",
@@ -3414,21 +3414,21 @@
   "description" : "The minimum size in bytes required for printing an allocation profiling entry."
 }, {
   "type" : "RUNTIME",
-  "name" : "±AllocationSiteSensitiveHeap",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AllocationSiteSensitiveHeap",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "A context sensitive heap means that each heap allocated object is modeled by using at least the allocation site."
 }, {
   "type" : "RUNTIME",
-  "name" : "±AlwaysInlineIntrinsics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AlwaysInlineIntrinsics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Unconditionally inline intrinsics."
 }, {
   "type" : "RUNTIME",
-  "name" : "±AlwaysInlineVTableStubs",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "AlwaysInlineVTableStubs",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
@@ -3456,27 +3456,27 @@
   "description" : "Array region equality checks will be evaluated at compile time if the receiver is a constant and its length is smaller than this value."
 }, {
   "type" : "RUNTIME",
-  "name" : "±AutomaticReferenceHandling",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "AutomaticReferenceHandling",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Determines if the reference handling is executed automatically or manually."
 }, {
   "type" : "RUNTIME",
-  "name" : "±BenchmarkCounterPrintingCutoff",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "BenchmarkCounterPrintingCutoff",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use a cutoff to print only most significant counters."
 }, {
   "type" : "RUNTIME",
-  "name" : "±BenchmarkCountersDumpDynamic",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "BenchmarkCountersDumpDynamic",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Dump dynamic counters."
 }, {
   "type" : "RUNTIME",
-  "name" : "±BenchmarkCountersDumpStatic",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "BenchmarkCountersDumpStatic",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Dump static counters."
 }, {
   "type" : "RUNTIME",
@@ -3492,9 +3492,9 @@
   "description" : "Turn on the benchmark counters. The format of this option is:."
 }, {
   "type" : "RUNTIME",
-  "name" : "±BootstrapInitializeOnly",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "BootstrapInitializeOnly",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Do not compile anything on bootstrap but just initialize the compiler."
 }, {
   "type" : "RUNTIME",
@@ -3510,51 +3510,51 @@
   "description" : "Ratio of the maximum compilation rate below which the bootstrap compilation rate must not fall (0 or less disables monitoring)."
 }, {
   "type" : "RUNTIME",
-  "name" : "±CanOmitFrame",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "CanOmitFrame",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±CanonicalGraphStringsCheckConstants",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "CanonicalGraphStringsCheckConstants",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Exclude virtual nodes when dumping canonical text for graphs."
 }, {
   "type" : "RUNTIME",
-  "name" : "±CanonicalGraphStringsExcludeVirtuals",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "CanonicalGraphStringsExcludeVirtuals",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Exclude virtual nodes when dumping canonical text for graphs."
 }, {
   "type" : "RUNTIME",
-  "name" : "±CanonicalGraphStringsRemoveIdentities",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "CanonicalGraphStringsRemoveIdentities",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Attempts to remove object identity hashes when dumping canonical text for graphs."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ClearMetricsAfterBootstrap",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ClearMetricsAfterBootstrap",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Clear the debug metrics after bootstrap."
 }, {
   "type" : "RUNTIME",
-  "name" : "±CollectImageBuildStatistics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "CollectImageBuildStatistics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Collect information during image build about devirtualized invokes and bytecode exceptions."
 }, {
   "type" : "RUNTIME",
-  "name" : "±CollectYoungGenerationSeparately",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "CollectYoungGenerationSeparately",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Determines if a full GC collects the young generation separately or together with the old generation."
 }, {
   "type" : "RUNTIME",
-  "name" : "±CompilationBailoutAsFailure",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "CompilationBailoutAsFailure",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Treat compilation bailouts like compilation failures."
 }, {
   "type" : "RUNTIME",
@@ -3600,15 +3600,15 @@
   "description" : "Delay in seconds before watch dog monitoring a compilation (0 disables monitoring)."
 }, {
   "type" : "RUNTIME",
-  "name" : "±CompileGraalWithC1Only",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "CompileGraalWithC1Only",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "In tiered mode compile Graal and JVMCI using optimized first tier code."
 }, {
   "type" : "RUNTIME",
-  "name" : "±CompileInIsolates",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "CompileInIsolates",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Activate runtime compilation in separate isolates (enable support during image build with option SupportCompileInIsolates)."
 }, {
   "type" : "RUNTIME",
@@ -3618,9 +3618,9 @@
   "description" : "Names the compiler configuration to use. If omitted, the compiler configuration with the highest auto-selection priority is used. To see the set of available configurations, supply the value 'help' to this option."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ConditionalElimination",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ConditionalElimination",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
@@ -3648,21 +3648,21 @@
   "description" : "Pattern for method(s) that will trigger an exception when compiled. This option exists to test handling compilation crashes gracefully. See the MethodFilter option for the pattern syntax. A ':Bailout' suffix will raise a bailout exception and a ':PermanentBailout' suffix will raise a permanent bailout exception."
 }, {
   "type" : "RUNTIME",
-  "name" : "±DebugStubsAndSnippets",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DebugStubsAndSnippets",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable debug output for stub code generation and snippet preparation."
 }, {
   "type" : "RUNTIME",
-  "name" : "±DeoptALot",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DeoptALot",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±DeoptAfterOSR",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "DeoptAfterOSR",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Deoptimize OSR compiled code when the OSR entry loop is finished if there is no mature profile available for the rest of the method."
 }, {
   "type" : "RUNTIME",
@@ -3672,9 +3672,9 @@
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±DetailedAsserts",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DetailedAsserts",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable expensive assertions if normal assertions (i.e. -ea or -esa) are enabled."
 }, {
   "type" : "RUNTIME",
@@ -3690,15 +3690,15 @@
   "description" : "Specifies how many details are printed for certain diagnostic thunks, e.g.: 'DumpThreads:1,DumpRegisters:2'. A value of 1 will result in the maximum amount of information, higher values will print less information. By default, the most detailed output is enabled for all diagnostic thunks. Wildcards (*) are supported in the name of the diagnostic thunk."
 }, {
   "type" : "RUNTIME",
-  "name" : "±DisableExplicitGC",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DisableExplicitGC",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Ignore calls to System.gc()."
 }, {
   "type" : "RUNTIME",
-  "name" : "±DisableIntercept",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DisableIntercept",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Disable intercepting exceptions in debug scopes."
 }, {
   "type" : "RUNTIME",
@@ -3708,9 +3708,9 @@
   "description" : "Disable intrinsics matching the given method filter (see MethodFilter option for details). For example, 'DisableIntrinsicsString.equals' disables intrinsics for any method named 'equals' in a class whose simple name is 'String'. You can append ':verbose' at the end of the filter value to print out disabled intrinsics as they are encountered during compilation (e.g., 'String.equals:verbose')."
 }, {
   "type" : "RUNTIME",
-  "name" : "±DivertParameterReturningMethod",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "DivertParameterReturningMethod",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Analysis: Detect methods that return one of their parameters and hardwire the parameter straight to the return."
 }, {
   "type" : "RUNTIME",
@@ -3720,27 +3720,27 @@
   "description" : "Filter pattern for specifying scopes in which dumping is enabled."
 }, {
   "type" : "RUNTIME",
-  "name" : "±DumpAfterEveryBCI",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DumpAfterEveryBCI",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Dump the current graph after every bci to IGV."
 }, {
   "type" : "RUNTIME",
-  "name" : "±DumpEndVersusExitLoopFrequencies",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DumpEndVersusExitLoopFrequencies",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Debug flag to dump loop frequency differences computed based on loop end or exit nodes.If the frequencies diverge a lot, this may indicate missing profiles on control flowinside the loop body."
 }, {
   "type" : "RUNTIME",
-  "name" : "±DumpHeapAndExit",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DumpHeapAndExit",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Create a heap dump and exit."
 }, {
   "type" : "RUNTIME",
-  "name" : "±DumpOnError",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DumpOnError",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Send compiler IR to dump handlers on error."
 }, {
   "type" : "RUNTIME",
@@ -3756,51 +3756,51 @@
   "description" : "The directory where various Graal dump files are written."
 }, {
   "type" : "RUNTIME",
-  "name" : "±DumpingErrorsAreFatal",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "DumpingErrorsAreFatal",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Treat any exceptions during dumping as fatal."
 }, {
   "type" : "RUNTIME",
-  "name" : "±DynamicCountersPrintGroupSeparator",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "DynamicCountersPrintGroupSeparator",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use grouping separators for number printing."
 }, {
   "type" : "RUNTIME",
-  "name" : "±EagerSnippets",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "EagerSnippets",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Eagerly construct extra snippet info."
 }, {
   "type" : "RUNTIME",
-  "name" : "±EarlyCodeEmissionOrder",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "EarlyCodeEmissionOrder",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable early code emission order computation instead of late code emission order computation."
 }, {
   "type" : "RUNTIME",
-  "name" : "±EarlyGVN",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "EarlyGVN",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Perform early global value numbering."
 }, {
   "type" : "RUNTIME",
-  "name" : "±EarlyLICM",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "EarlyLICM",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Perform early loop invariant code motion."
 }, {
   "type" : "RUNTIME",
-  "name" : "±EmitStringSubstitutions",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "EmitStringSubstitutions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Emit substitutions for String methods."
 }, {
   "type" : "RUNTIME",
-  "name" : "±EnableSignalHandling",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "EnableSignalHandling",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enables signal handling."
 }, {
   "type" : "RUNTIME",
@@ -3834,33 +3834,33 @@
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±ExhaustiveHeapScan",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ExhaustiveHeapScan",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Scan all objects reachable from roots for analysis. By default false."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ExitOnOutOfMemoryError",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ExitOnOutOfMemoryError",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Exit on the first occurrence of an out-of-memory error that is thrown because the Java heap is out of memory."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ExitVMOnException",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ExitVMOnException",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Alias for CompilationFailureActionExitVM."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ExtendedAsserts",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ExtendedAsserts",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable extended asserts which slow down analysis."
 }, {
   "type" : "RUNTIME",
-  "name" : "±FailedLoopExplosionIsFatal",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "FailedLoopExplosionIsFatal",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Do not bail out but throw an exception on failed loop explosion."
 }, {
   "type" : "RUNTIME",
@@ -3870,9 +3870,9 @@
   "description" : "Internal option used to specify runtime java arguments for FallbackExecutor."
 }, {
   "type" : "RUNTIME",
-  "name" : "±FlightRecorder",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "FlightRecorder",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable Java Flight Recorder."
 }, {
   "type" : "RUNTIME",
@@ -3882,27 +3882,27 @@
   "description" : "Usage: -XX:FlightRecorderLogging[tag1[+tag2...][*][level][,...]]."
 }, {
   "type" : "RUNTIME",
-  "name" : "±FloatingDivNodes",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "FloatingDivNodes",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Try to float non-constant division operations to expose global value numbering of divisions."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ForceAdversarialLayout",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ForceAdversarialLayout",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Place N-byte constants in the data section such that they are misaligned with respect to N*2. For example, place 4 byte constants at offset 4, 12 or 20, etc. This layout is used to detect instructions that load constants with alignment smaller than the fetch size. For instance, an XORPS instruction that does a 16-byte fetch of a 4-byte float not aligned to 16 bytes will cause a segfault."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ForceDumpGraphsBeforeCompilation",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ForceDumpGraphsBeforeCompilation",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Force-dump graphs before compilation."
 }, {
   "type" : "RUNTIME",
-  "name" : "±FullUnroll",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "FullUnroll",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
@@ -3936,21 +3936,21 @@
   "description" : "Start tracing compiled GC barriers after N garbage collections (disabled if N < 0)."
 }, {
   "type" : "RUNTIME",
-  "name" : "±GenLoopSafepoints",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "GenLoopSafepoints",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±GenericDynamicCounters",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "GenericDynamicCounters",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Turn on the benchmark counters, and displays the results on VM shutdown."
 }, {
   "type" : "RUNTIME",
-  "name" : "±GraalArithmeticStubs",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "GraalArithmeticStubs",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use Graal arithmetic stubs instead of HotSpot stubs where possible."
 }, {
   "type" : "RUNTIME",
@@ -3966,9 +3966,9 @@
   "description" : "Graal graph compression is performed when percent of live nodes falls below this value."
 }, {
   "type" : "RUNTIME",
-  "name" : "±GuardPriorities",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "GuardPriorities",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
@@ -3978,27 +3978,27 @@
   "description" : "Control heap verifier verbosity level: 0 - quiet, 1 - info, 2 - warning, 3 - all."
 }, {
   "type" : "RUNTIME",
-  "name" : "±HotSpotDeoptExplicitExceptions",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "HotSpotDeoptExplicitExceptions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Testing only option that forces deopts for exception throws."
 }, {
   "type" : "RUNTIME",
-  "name" : "±HotSpotPostOnExceptions",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "HotSpotPostOnExceptions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Testing only option that forces deopts for exception throws."
 }, {
   "type" : "RUNTIME",
-  "name" : "±HotSpotPrintInlining",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "HotSpotPrintInlining",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print inlining optimizations."
 }, {
   "type" : "RUNTIME",
-  "name" : "±HybridStaticContext",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "HybridStaticContext",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable hybrid context for static methods, i.e. uses invocation site as context for static methods."
 }, {
   "type" : "RUNTIME",
@@ -4032,21 +4032,21 @@
   "description" : "Suppress the expansion of specified types. See: Reports.md."
 }, {
   "type" : "RUNTIME",
-  "name" : "±Inline",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "Inline",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable inlining."
 }, {
   "type" : "RUNTIME",
-  "name" : "±InlineBeforeAnalysis",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlineBeforeAnalysis",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inline methods before static analysis."
 }, {
   "type" : "RUNTIME",
-  "name" : "±InlineDuringParsing",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlineDuringParsing",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inlines trivial methods during bytecode parsing."
 }, {
   "type" : "RUNTIME",
@@ -4056,39 +4056,39 @@
   "description" : "Maximum depth when inlining during bytecode parsing."
 }, {
   "type" : "RUNTIME",
-  "name" : "±InlineEverything",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "InlineEverything",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±InlineMegamorphicCalls",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlineMegamorphicCalls",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inline calls with megamorphic type profile (i.e., not all types could be recorded)."
 }, {
   "type" : "RUNTIME",
-  "name" : "±InlineMonomorphicCalls",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlineMonomorphicCalls",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inline calls with monomorphic type profile."
 }, {
   "type" : "RUNTIME",
-  "name" : "±InlinePartialIntrinsicExitDuringParsing",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlinePartialIntrinsicExitDuringParsing",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inlines partial intrinsic exits during bytecode parsing when possible. A partial intrinsic exit is a call within an intrinsic to the method being intrinsified and denotes semantics of the original method that the intrinsic does not support."
 }, {
   "type" : "RUNTIME",
-  "name" : "±InlinePolymorphicCalls",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlinePolymorphicCalls",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Inline calls with polymorphic type profile."
 }, {
   "type" : "RUNTIME",
-  "name" : "±InlineVTableStubs",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "InlineVTableStubs",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
@@ -4104,21 +4104,21 @@
   "description" : "Path to the contents of the Inspect web server."
 }, {
   "type" : "RUNTIME",
-  "name" : "±InstallSegfaultHandler",
-  "dataType" : "STRING",
-  "defaultValue" : "enabled",
+  "name" : "InstallSegfaultHandler",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Install segfault handler that prints register contents and full Java stacktrace."
 }, {
   "type" : "RUNTIME",
-  "name" : "±InterceptBailout",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "InterceptBailout",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Intercept also bailout exceptions."
 }, {
   "type" : "RUNTIME",
-  "name" : "±Intrinsify",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "Intrinsify",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use compiler intrinsifications."
 }, {
   "type" : "RUNTIME",
@@ -4134,93 +4134,93 @@
   "description" : "Allow iterative peeling of loops up to this many times (each time the peeling phase runs)."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIRDynMoveProfileMethod",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIRDynMoveProfileMethod",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable dynamic move profiling per method."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIROptConstantLoadOptimization",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptConstantLoadOptimization",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable constant load optimization."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIROptControlFlowOptimizer",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptControlFlowOptimizer",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIROptEdgeMoveOptimizer",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptEdgeMoveOptimizer",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIROptLSRAEliminateSpillMoves",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptLSRAEliminateSpillMoves",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable spill move elimination."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIROptLSRAOptimizeSpillPosition",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptLSRAOptimizeSpillPosition",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable spill position optimization."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIROptLSStackSlotAllocator",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptLSStackSlotAllocator",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Use linear scan stack slot allocation."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIROptNullCheckOptimizer",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptNullCheckOptimizer",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIROptRedundantMoveElimination",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptRedundantMoveElimination",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIROptStackMoveOptimizer",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIROptStackMoveOptimizer",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIROptimization",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "LIROptimization",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable LIR level optimizations."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIRProfileMethods",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIRProfileMethods",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enables profiling of methods."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LIRProfileMoves",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LIRProfileMoves",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enables profiling of move types on LIR level. Move types are for example stores (register to stack), constant loads (constant to register) or copies (register to register)."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LSRAOptSplitOnly",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LSRAOptSplitOnly",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "LSRA optimization: Only split but do not reassign."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LSRAOptimization",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LSRAOptimization",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable LSRA optimization."
 }, {
   "type" : "RUNTIME",
@@ -4230,21 +4230,21 @@
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±LimitObjectArrayLength",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LimitObjectArrayLength",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable a limit for the number of objects recorded for each type of a type state before disabling heap sensitivity for that type. The analysis must be heap sensitive."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ListMetrics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ListMetrics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Lists on the console at VM shutdown the metric names available to the Timers, Counters and MemUseTrackers options. Note that this only lists the metrics that were initialized during the VM execution and so will not include metrics for compiler code that is not executed."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LoadExceptionObjectInVM",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LoadExceptionObjectInVM",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Use a VM runtime call to load and clear the exception object from the thread at the start of a compiled exception handler."
 }, {
   "type" : "RUNTIME",
@@ -4260,9 +4260,9 @@
   "description" : "File to which logging is sent. A %p in the name will be replaced with a string identifying the process, usually the process id and %t will be replaced by System.currentTimeMillis(). If the current runtime is in an isolate, then %i will be replaced by '<isolate id>' otherwise %i is removed. An %I is the same as %i except that the replacement is '<isolate id>@<isolate address>'. Using %o as filename sends logging to System.out whereas %e sends logging to System.err."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LogVerbose",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LogVerbose",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable more verbose log output when available."
 }, {
   "type" : "RUNTIME",
@@ -4284,33 +4284,33 @@
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±LoopOnFatalError",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "LoopOnFatalError",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Execute an endless loop before printing diagnostics for a fatal error."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LoopPeeling",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "LoopPeeling",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±LoopPredication",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "LoopPredication",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Hoists array bounds checks out of simple loops. This is ignored if SpeculativeGuardMovement is enabled."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LoopPredicationMainPath",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "LoopPredicationMainPath",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Restricts LoopPredication to only focus on array bounds checks that dominate the back edge of a loop."
 }, {
   "type" : "RUNTIME",
-  "name" : "±LoopUnswitch",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "LoopUnswitch",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
@@ -4350,9 +4350,9 @@
   "description" : "Number of nodes allowed for a loop unswitching regardless of the loop frequency."
 }, {
   "type" : "RUNTIME",
-  "name" : "±MatchExpressions",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "MatchExpressions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Allow backend to match complex expressions."
 }, {
   "type" : "RUNTIME",
@@ -4500,9 +4500,9 @@
   "description" : "Pattern for matching methods. The syntax for a pattern is:."
 }, {
   "type" : "RUNTIME",
-  "name" : "±MethodFilterRootOnly",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "MethodFilterRootOnly",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Only check MethodFilter against the root method in the context if true, otherwise check all methods."
 }, {
   "type" : "RUNTIME",
@@ -4554,9 +4554,9 @@
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±MoveGuardsUpwards",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "MoveGuardsUpwards",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Move guard nodes to earlier places in the dominator tree if all successors of basic block share a common guard condition."
 }, {
   "type" : "RUNTIME",
@@ -4566,9 +4566,9 @@
   "description" : "Run level for NoDeadCodeVerifyHandler (0 off, 1 info, 2 verbose, 3 fatal)."
 }, {
   "type" : "RUNTIME",
-  "name" : "±NodeCounters",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "NodeCounters",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Counts the number of instances of each node class."
 }, {
   "type" : "RUNTIME",
@@ -4584,87 +4584,87 @@
   "description" : "Comma separated list of candidate GNU objdump executables. If not specified, disassembling via GNU objdump is disabled. Otherwise, the first existing executable in the list is used."
 }, {
   "type" : "RUNTIME",
-  "name" : "±OmitHotExceptionStacktrace",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "OmitHotExceptionStacktrace",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±OptAssumptions",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptAssumptions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±OptConvertDeoptsToGuards",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptConvertDeoptsToGuards",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±OptDeoptimizationGrouping",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptDeoptimizationGrouping",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±OptDevirtualizeInvokesOptimistically",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptDevirtualizeInvokesOptimistically",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±OptEarlyReadElimination",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptEarlyReadElimination",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±OptEliminateGuards",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptEliminateGuards",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±OptFloatingReads",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptFloatingReads",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±OptImplicitNullChecks",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptImplicitNullChecks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±OptReadElimination",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptReadElimination",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±OptScheduleOutOfLoops",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "OptScheduleOutOfLoops",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±PartialEscapeAnalysis",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "PartialEscapeAnalysis",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±PartialUnroll",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "PartialUnroll",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±PeelALot",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PeelALot",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
@@ -4674,15 +4674,15 @@
   "description" : "Percentage of total collection time that should be spent on young generation collections."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PreferContainerQuotaForCPUCount",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "PreferContainerQuotaForCPUCount",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Calculate the container CPU availability based on the value of quotas (if set), when true. Otherwise, use the CPU shares value, provided it is less than quota."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintAnalysisCallTree",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintAnalysisCallTree",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print analysis call tree, a breadth-first tree reduction of the call graph."
 }, {
   "type" : "RUNTIME",
@@ -4692,27 +4692,27 @@
   "description" : "Change the output format of the analysis call tree, available options are TXT and CSV. See: Reports.md."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintAnalysisStatistics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintAnalysisStatistics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print analysis results statistics."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintBackendCFG",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintBackendCFG",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable dumping scheduled HIR, LIR, register allocation and code generation info to the C1Visualizer."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintBlockMapping",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintBlockMapping",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable dumping CFG built during initial BciBlockMapping."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintCallEdges",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintCallEdges",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print call edges with other analysis results statistics."
 }, {
   "type" : "RUNTIME",
@@ -4722,21 +4722,21 @@
   "description" : "Choose format used when dumping canonical text for graphs: 0 gives a scheduled graph (better for spotting changes involving the schedule) while 1 gives a CFG containing expressions rooted at fixed nodes (better for spotting small structure differences)."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintCanonicalGraphStrings",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintCanonicalGraphStrings",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable dumping canonical text from for graphs."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintCompilation",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintCompilation",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print an informational line to the console for each completed compilation."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintDetailedAllocationProfiling",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "PrintDetailedAllocationProfiling",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Print detailed information for each allocation site."
 }, {
   "type" : "RUNTIME",
@@ -4752,27 +4752,27 @@
   "description" : "Print extra help, if available, based on comma-separated option names. Pass * to show all options that contain extra help."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintGC",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintGC",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print summary GC information after each collection."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintGCSummary",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintGCSummary",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print summary GC information after application main method returns."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintGCTimeStamps",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintGCTimeStamps",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print a time stamp at each collection, if +PrintGC or +VerboseGC."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintGCTimes",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintGCTimes",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print the time for each of the phases of each collection, if +VerboseGC."
 }, {
   "type" : "RUNTIME",
@@ -4782,9 +4782,9 @@
   "description" : "Where IdealGraphVisualizer graph dumps triggered by Dump or DumpOnError should be written."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintGraphFile",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "PrintGraphFile",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Setting to true sets PrintGraphfile, setting to false sets PrintGraphnetwork."
 }, {
   "type" : "RUNTIME",
@@ -4800,63 +4800,63 @@
   "description" : "Port part of the address to which graphs are dumped in binary format."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintGraphWithSchedule",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintGraphWithSchedule",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Schedule graphs as they are dumped."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintHeapShape",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintHeapShape",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print the shape of the heap before and after each collection, if +VerboseGC."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintIRWithLIR",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintIRWithLIR",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print HIR along side LIR as the latter is generated."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintImageObjectTree",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintImageObjectTree",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print image object hierarchy."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintLIRWithAssembly",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintLIRWithAssembly",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Include the LIR as comments with the final assembly."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintPointsToStatistics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintPointsToStatistics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Report analysis statistics."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintProfilingInformation",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintProfilingInformation",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print profiling information when parsing a method's bytecode."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintSynchronizedAnalysis",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "PrintSynchronizedAnalysis",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print types used for Java synchronization."
 }, {
   "type" : "RUNTIME",
-  "name" : "±PrintUnmodifiedGraphs",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "PrintUnmodifiedGraphs",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Dump a graph even if it has not changed since it was last dumped. Change detection is based on adding and deleting nodes or changing inputs."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ProfileAllocations",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ProfileAllocations",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable profiling of allocation sites."
 }, {
   "type" : "RUNTIME",
@@ -4866,33 +4866,33 @@
   "description" : "Control the naming and granularity of the counters when using ProfileAllocations."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ProfileAnalysisOperations",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ProfileAnalysisOperations",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track the progress of the static analysis."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ProfileCompiledMethods",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ProfileCompiledMethods",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±ProfileConstantObjects",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ProfileConstantObjects",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track the creation of constant objects."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ProfileMonitors",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ProfileMonitors",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable profiling of monitor operations."
 }, {
   "type" : "RUNTIME",
-  "name" : "±RawConditionalElimination",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "RawConditionalElimination",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
@@ -4902,15 +4902,15 @@
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±ReassociateExpressions",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ReassociateExpressions",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Re-associate loop invariants and constants."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ReduceDCE",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ReduceDCE",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Disable optional dead code eliminations."
 }, {
   "type" : "RUNTIME",
@@ -4920,27 +4920,27 @@
   "description" : "Comma separated list of registers that register allocation is limited to."
 }, {
   "type" : "RUNTIME",
-  "name" : "±RelaxTypeFlowStateConstraints",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "RelaxTypeFlowStateConstraints",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Allow a type flow state to contain types not compatible with its declared type."
 }, {
   "type" : "RUNTIME",
-  "name" : "±RemoveNeverExecutedCode",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "RemoveNeverExecutedCode",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±RemoveSaturatedTypeFlows",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "RemoveSaturatedTypeFlows",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Enable the type flow saturation analysis performance optimization."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ReplaceInputsWithConstantsBasedOnStamps",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ReplaceInputsWithConstantsBasedOnStamps",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
@@ -4956,15 +4956,15 @@
   "description" : "Print a warning if I can not come to a safepoint in this many nanoseconds. 0 implies forever."
 }, {
   "type" : "RUNTIME",
-  "name" : "±SamplingBasedProfiling",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "SamplingBasedProfiling",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Allow sampling-based profiling. Default: disabled in execution."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ScanObjectsParallel",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "ScanObjectsParallel",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Object scanning in parallel."
 }, {
   "type" : "RUNTIME",
@@ -4974,21 +4974,21 @@
   "description" : "Writes to the VM log information about the compiler configuration selected."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ShowDumpFiles",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ShowDumpFiles",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print the name of each dump file path as it's created."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ShowSubstitutionSourceInfo",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ShowSubstitutionSourceInfo",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Controls whether the source position information of snippets and method substitutions are exposed to HotSpot. Can be useful when profiling to get more precise position information."
 }, {
   "type" : "RUNTIME",
-  "name" : "±SimpleFastInflatedLocking",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "SimpleFastInflatedLocking",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Handle simple cases for inflated monitors in the fast-path."
 }, {
   "type" : "RUNTIME",
@@ -4998,9 +4998,9 @@
   "description" : "If the previous low-level graph size of the method exceeds the threshold, it is not inlined."
 }, {
   "type" : "RUNTIME",
-  "name" : "±SnippetCounters",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "SnippetCounters",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable counters for various paths in snippets."
 }, {
   "type" : "RUNTIME",
@@ -5010,15 +5010,15 @@
   "description" : "Select a strategy to mitigate speculative bounds check bypass (aka Spectre-PHT or Spectre V1)."
 }, {
   "type" : "RUNTIME",
-  "name" : "±SpectrePHTIndexMasking",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "SpectrePHTIndexMasking",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Mask indices to scope access to allocation size after bounds check."
 }, {
   "type" : "RUNTIME",
-  "name" : "±SpeculativeGuardMovement",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "SpeculativeGuardMovement",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Move loop invariant guards (e.g., array bounds checks) out of loops."
 }, {
   "type" : "RUNTIME",
@@ -5034,27 +5034,27 @@
   "description" : "Start flight recording with options."
 }, {
   "type" : "RUNTIME",
-  "name" : "±StressExplicitExceptionCode",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "StressExplicitExceptionCode",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Stress the code emitting explicit exception throwing code."
 }, {
   "type" : "RUNTIME",
-  "name" : "±StressInvokeWithExceptionNode",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "StressInvokeWithExceptionNode",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Stress the code emitting invokes with explicit exception edges."
 }, {
   "type" : "RUNTIME",
-  "name" : "±StressTestEarlyReads",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "StressTestEarlyReads",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Stress the code by emitting reads at earliest instead of latest point."
 }, {
   "type" : "RUNTIME",
-  "name" : "±StrictDeoptInsertionChecks",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "StrictDeoptInsertionChecks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Perform checks that guards and deopts aren't introduced in graphs that should handle exceptions explicitly."
 }, {
   "type" : "RUNTIME",
@@ -5064,15 +5064,15 @@
   "description" : "String.indexOf invocations will be evaluated at compile time if the receiver is a constant and its length is smaller than this value."
 }, {
   "type" : "RUNTIME",
-  "name" : "±SupportJsrBytecodes",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "SupportJsrBytecodes",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±SupportOSRWithLocks",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "SupportOSRWithLocks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Support OSR compilations with locks. If DeoptAfterOSR is true we can per definition not have unbalanced enter/exits mappings. If DeoptAfterOSR is false insert artificial monitor enters after the OSRStart to have balanced enter/exits in the graph."
 }, {
   "type" : "RUNTIME",
@@ -5112,57 +5112,57 @@
   "description" : "The trace level for the bytecode parser. A value of 1 enables instruction tracing and any greater value emits a frame state trace just prior to each instruction trace.Instruction tracing output from multiple compiler threads will be interleaved so use of this option make most sense for single threaded compilation. The MethodFilter option can be used to refine tracing to selected methods."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TraceCodeCache",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceCodeCache",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print logging information for runtime code cache modifications."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TraceDeoptimization",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceDeoptimization",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print logging information for every deoptimization."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TraceDeoptimizationDetails",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceDeoptimizationDetails",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print verbose logging information for every deoptimization."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TraceEscapeAnalysis",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceEscapeAnalysis",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±TraceExceptionHandlerStub",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceExceptionHandlerStub",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Trace execution of stub used to handle an exception thrown by a callee."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TraceHeapChunks",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceHeapChunks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Trace heap chunks during collections, if +VerboseGC and +PrintHeapShape."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TraceInlineDuringParsing",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceInlineDuringParsing",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Traces inlining performed during bytecode parsing."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TraceInlining",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceInlining",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable tracing of inlining decisions."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TraceInliningForStubsAndSnippets",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceInliningForStubsAndSnippets",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enable inlining decision tracing in stubs and snippets."
 }, {
   "type" : "RUNTIME",
@@ -5184,27 +5184,27 @@
   "description" : "Trace monitor operations on objects whose type contains this substring."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TraceParserPlugins",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceParserPlugins",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Traces use of plugins during bytecode parsing."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TraceUnwindStub",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TraceUnwindStub",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Trace execution of the stub that routes an exception to a handler in the calling frame."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TrackAccessChain",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TrackAccessChain",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track the callers for methods and accessing methods for fields."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TrackInputFlows",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TrackInputFlows",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track the input for type flows."
 }, {
   "type" : "RUNTIME",
@@ -5214,15 +5214,15 @@
   "description" : "Pattern for specifying scopes in which memory use tracking is enabled. See the Dump option for the pattern syntax. An empty value enables all memory use trackers unconditionally."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TrackNodeInsertion",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TrackNodeInsertion",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track source stack trace where a node was inserted into the graph."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TrackNodeSourcePosition",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TrackNodeSourcePosition",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Track the NodeSourcePosition."
 }, {
   "type" : "RUNTIME",
@@ -5238,9 +5238,9 @@
   "description" : "Select a compiler configuration for Truffle compilation (default: use Graal system compiler configuration)."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TruffleHostInlining",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "TruffleHostInlining",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Whether Truffle host inlining is enabled."
 }, {
   "type" : "RUNTIME",
@@ -5262,15 +5262,15 @@
   "description" : "Determines the maximum call depth for exploration during host inlining."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TruffleHostInliningPrintExplored",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "TruffleHostInliningPrintExplored",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "When logging is activated for this phase enables printing of only explored, but ultimately not inlined call trees."
 }, {
   "type" : "RUNTIME",
-  "name" : "±TrustFinalDefaultFields",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "TrustFinalDefaultFields",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Determines whether to treat final fields with default values as constant."
 }, {
   "type" : "RUNTIME",
@@ -5292,9 +5292,9 @@
   "description" : "The maximum number of types recorded in a type flow. -1 indicates no limitation."
 }, {
   "type" : "RUNTIME",
-  "name" : "±UnresolvedIsError",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UnresolvedIsError",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Report unresolved elements as errors."
 }, {
   "type" : "RUNTIME",
@@ -5304,69 +5304,69 @@
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±UseBranchesWithin32ByteBoundary",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UseBranchesWithin32ByteBoundary",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Force branch instructions to align with 32-bytes boundary, to mitigate the jcc erratum. See https://www.intel.com/content/dam/support/us/en/documents/processors/mitigations-jump-conditional-code-erratum.pdf for more details. If not set explicitly, the default value will be determined according to the CPU model."
 }, {
   "type" : "RUNTIME",
-  "name" : "±UseCompilationStatistics",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UseCompilationStatistics",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Enables CompilationStatistics."
 }, {
   "type" : "RUNTIME",
-  "name" : "±UseExceptionProbability",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseExceptionProbability",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±UseGraalStubs",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseGraalStubs",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use Graal-generated stubs for complicated LIR operations instead of embedding all the emitted code."
 }, {
   "type" : "RUNTIME",
-  "name" : "±UseLoopEndFrequencies",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "UseLoopEndFrequencies",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Derive loop frequencies only from backedge frequencies instead of from loop exit frequencies."
 }, {
   "type" : "RUNTIME",
-  "name" : "±UseLoopLimitChecks",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseLoopLimitChecks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±UseSnippetGraphCache",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseSnippetGraphCache",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use a cache for snippet graphs."
 }, {
   "type" : "RUNTIME",
-  "name" : "±UseSnippetTemplateCache",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseSnippetTemplateCache",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use a LRU cache for snippet templates."
 }, {
   "type" : "RUNTIME",
-  "name" : "±UseTrappingNullChecks",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseTrappingNullChecks",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Use traps for null checks instead of explicit null-checks."
 }, {
   "type" : "RUNTIME",
-  "name" : "±UseTypeCheckHints",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "UseTypeCheckHints",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±VerboseGC",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerboseGC",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print more information about the heap before and after each collection."
 }, {
   "type" : "RUNTIME",
@@ -5376,62 +5376,62 @@
   "description" : "Pattern for specifying scopes in which logging is enabled. See the Dump option for the pattern syntax."
 }, {
   "type" : "RUNTIME",
-  "name" : "±VerifyBalancedMonitors",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyBalancedMonitors",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Emit extra code to dynamically check monitor operations are balanced."
 }, {
   "type" : "RUNTIME",
-  "name" : "±VerifyGraalGraphEdges",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyGraalGraphEdges",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Perform expensive verification of graph inputs, usages, successors and predecessors."
 }, {
   "type" : "RUNTIME",
-  "name" : "±VerifyGraalGraphs",
-  "dataType" : "STRING",
-  "defaultValue" : "+",
+  "name" : "VerifyGraalGraphs",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : true,
   "description" : "Verify graphs often during compilation when assertions are turned on."
 }, {
   "type" : "RUNTIME",
-  "name" : "±VerifyGraalPhasesSize",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyGraalPhasesSize",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Verify before - after relation of the relative, computed, code size of a graph."
 }, {
   "type" : "RUNTIME",
-  "name" : "±VerifyHeapAtReturn",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyHeapAtReturn",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Perform platform dependent validation of the Java heap at returns."
 }, {
   "type" : "RUNTIME",
-  "name" : "±VerifyKillCFGUnusedNodes",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyKillCFGUnusedNodes",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Verify that there are no new unused nodes when performing killCFG."
 }, {
   "type" : "RUNTIME",
-  "name" : "±VerifyPhases",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "VerifyPhases",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 }, {
   "type" : "RUNTIME",
-  "name" : "±WarnMissingIntrinsic",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "WarnMissingIntrinsic",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Print a warning when a missing intrinsic is seen."
 }, {
   "type" : "RUNTIME",
-  "name" : "±WriteableCodeCache",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "WriteableCodeCache",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : "Allocate code cache with write access, allowing inlining of objects."
 }, {
   "type" : "RUNTIME",
-  "name" : "±ZapStackOnMethodEntry",
-  "dataType" : "STRING",
-  "defaultValue" : "-",
+  "name" : "ZapStackOnMethodEntry",
+  "dataType" : "BOOLEAN",
+  "defaultValue" : false,
   "description" : ""
 } ]
