@@ -1,9 +1,10 @@
 # GraalVM `native-image` Options
 
 Parse options of GraalVM `native-image` to JSON data.
+ 
+GraalVM versions supported:
 
-Two GraalVM versions supported:
-
+* `22.2.0`
 * `22.1.0`
 * `21.3.0`
 * `20.3.4`
