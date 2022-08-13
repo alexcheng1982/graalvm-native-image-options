@@ -1,4 +1,4 @@
-VERSION_TAGS=('22.2.0', '22.1.0' '21.3.0' '20.3.4')
+VERSION_TAGS=('22.2.0' '22.1.0' '21.3.0' '20.3.4')
 
 mkdir options-input
 
