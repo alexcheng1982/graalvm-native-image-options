@@ -1,11 +1,14 @@
 # GraalVM `native-image` Options
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R5R3FD1UD)
+
 Parse options of GraalVM `native-image` to JSON data.
 
 Visit [build-native-java-apps.cc](https://build-native-java-apps.cc/references/expert-options/) to see these options.
  
 GraalVM versions supported:
 
+* `22.3.0`
 * `22.2.0`
 * `22.1.0`
 * `21.3.0`
