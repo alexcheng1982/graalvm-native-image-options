@@ -1,6 +1,6 @@
 # GraalVM `native-image` Options
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R5R3FD1UD)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/alexcheng1982)
 
 Parse options of GraalVM `native-image` to JSON data.
 
