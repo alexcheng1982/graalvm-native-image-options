@@ -8,6 +8,7 @@ Visit [build-native-java-apps.cc](https://build-native-java-apps.cc/references/e
 
 GraalVM versions supported:
 
+- `Oracle GraalVM 22.0.1`
 - `22.3.3`
 - `22.3.2`
 - `22.3.0`
